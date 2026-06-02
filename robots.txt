@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Prevent duplication by blocking older or development paths
+Disallow: /v1/
+Disallow: /staging/
+
+# Explicitly declare your sitemap location
+Sitemap: https://gauravkansal.in
