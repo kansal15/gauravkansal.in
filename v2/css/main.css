@@ -1463,6 +1463,9 @@ input[type="text"],
   white-space: nowrap;
   text-transform: uppercase;
 }
+.knowledges li a{
+  color: #00718d;
+}
 
 /* --- End of Knowledges --- */
 
@@ -1730,6 +1733,32 @@ input[type="text"],
 .portfolio-grid figure:hover .name,
 .portfolio-grid figure:hover .category {
   opacity: 1;
+}
+
+.portfolio-details{
+  background: #fff;
+margin-bottom: 15px;
+border-radius: 5px;
+background-color: #f9f9f9;
+gap: 10px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
+border: 1px solid #ededed;
+min-height: 180px;
+}
+.portfolio-grid figure .portfolio-details .name{
+  padding: 5px 0 10px 0;
+font-size: 16px;
+color: #0099cc;
+}
+.portfolio-grid figure .portfolio-details .category{
+  top: 0;
+left: 0;
+position: relative;
+opacity: 1;
+
 }
 
 /* --- End of Portfolio --- */
@@ -3015,8 +3044,8 @@ blockquote {
 
 .title-block .sp-subtitle {
   color: #888;
-  font-size: 21px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   margin: 5px 0;
   text-align: center;
 }
