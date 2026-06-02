@@ -450,16 +450,24 @@ input[type="submit"]:focus {
 
 .header-titles h4 {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   color: #fff;
   margin: 0;
   line-height: 1.2em;
   margin-top: 26px;
+  margin-bottom: 5px;
 }
 
 /* --- Social Links --- */
 .social-links {
-  margin: 20px 0;
+  margin: 10px 0;
+  bottom: 0;
+  position: absolute;
+  width: 350px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px 10px;
 }
 
 .social-links ul {
@@ -509,7 +517,7 @@ input[type="submit"]:focus {
 
 .header .copyrights {
   color: #fff;
-  width: 380px;
+  width: 350px;
   position: absolute;
   bottom: 0;
   left: 0;
