@@ -1469,7 +1469,7 @@ input[type="text"],
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
-  text-transform: uppercase;
+  text-transform:capitalize
 }
 .knowledges li a{
   color: #00718d;
@@ -1596,9 +1596,10 @@ input[type="text"],
 .portfolio-grid figure {
   width: 33.33333%;
   float: left;
-  padding: 7px;
+  padding:0 7px;
   position: relative;
   overflow: hidden;
+  
 }
 
 .portfolio-grid.one-column figure {
@@ -1691,6 +1692,9 @@ input[type="text"],
   color: #888;
 }
 
+
+
+
 .portfolio-grid figure i {
   display: inline-block;
   position: absolute;
@@ -1744,7 +1748,6 @@ input[type="text"],
 }
 
 .portfolio-details{
-  background: #fff;
 margin-bottom: 15px;
 border-radius: 5px;
 background-color: #f9f9f9;
@@ -1754,8 +1757,9 @@ flex-direction: column;
 align-items: flex-start;
 padding: 10px;
 border: 1px solid #ededed;
-min-height: 180px;
+min-height: 220px;
 }
+
 .portfolio-grid figure .portfolio-details .name{
   padding: 5px 0 10px 0;
 font-size: 16px;
@@ -2427,6 +2431,11 @@ blockquote {
 /* ------------------------------------------------------------
 8. Media Queries
 ------------------------------------------------------------ */
+@media only screen and (max-width: 1380px){
+  .portfolio-details{
+    min-height: 265px;
+  }
+}
 @media only screen and (max-width: 1280px) {
   .page {
     padding-left: 30px;
@@ -2439,12 +2448,26 @@ blockquote {
   .content-area {
     max-width: calc(100% - 330px);
   }
+  .portfolio-details{
+    min-height: 260px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .portfolio-grid.two-columns figure{
+    width: 100%;
+  }
+  .portfolio-details{
+    min-height: 260px;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
   .menu-toggle {
     display: none;
   }
+
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2655,6 +2678,12 @@ blockquote {
     position: relative;
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .portfolio-grid.two-columns figure{
+    width: 100%;
+  }
+  .portfolio-details{
+    min-height: 260px;
   }
 }
 
