@@ -1747,6 +1747,13 @@ input[type="text"],
   opacity: 1;
 }
 
+.portfolio-subtext{
+  color: #919191;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .portfolio-details{
 margin-bottom: 15px;
 border-radius: 5px;
@@ -1761,9 +1768,9 @@ min-height: 220px;
 }
 
 .portfolio-grid figure .portfolio-details .name{
-  padding: 5px 0 10px 0;
-font-size: 16px;
-color: #0099cc;
+  padding: 5px 0 0 0;
+  color: #0099cc;
+  margin-bottom: 0;
 }
 .portfolio-grid figure .portfolio-details .category{
   top: 0;
@@ -1978,6 +1985,27 @@ opacity: 1;
 /* --- End of Blog --- */
 
 
+/* --- Speaker --- */
+.speakerCard{
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ededed;
+}
+
+.speakerCard .speaker-h4{
+  font-size: 16px;
+  color: #0099cc;
+  margin-bottom: 5px;
+}
+
+.speakerCard .speakerLocation{
+    color: #919191;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+/* --- End of Speaker --- */
 
 /* --- Detailed Portfolio Page --- */
 .page-ajax-loaded {
