@@ -20,6 +20,29 @@
    <meta property="og:site_name"   content="Gaurav Kansal">
    <meta property="og:locale"      content="en_IN">
 
+   <!-- ── Twitter / X card (was missing entirely) ── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@kansal15">
+  <meta name="twitter:creator"     content="@kansal15">
+  <meta name="twitter:title"       content="Gaurav Kansal — Senior IT Leader | DNS, IPv6 &amp; Cyber Security">
+  <meta name="twitter:description"
+   content="Joint Director (IT) at NIC · Technical Lead, Bharat Public DNS (1.10.10.10) · Former NRO NC Member at APNIC (2023–2024) · DNS, IPv6, TLS, Wi-Fi.">
+  <meta name="twitter:image"       content="https://www.gauravkansal.in/v2/img/meta_image.jpg">
+
+   <!--
+     CONTENT SECURITY POLICY (optional but recommended)
+     Add this HTTP response header on your server, OR as a
+     <meta> tag in <head>. Helps prevent XSS attacks.
+   -->
+		<meta http-equiv="Content-Security-Policy"
+      		content="default-src 'self';
+               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+               font-src 'self' https://fonts.gstatic.com;
+               img-src 'self' data: https:;
+               connect-src 'self' https://www.google-analytics.com;
+               frame-src https://www.googletagmanager.com;">
+
    <!-- Canonical — tells Google which URL is the authoritative version -->
    <link rel="canonical" href="https://www.gauravkansal.in/v2/index.html">
 
@@ -273,13 +296,17 @@
                            </div>
                            <div class="timeline-item clearfix">
                               <div class="left-part">
-                                 <h5 class="item-period">2023 - 2024</h5>
-                                 <!-- <span class="item-company">National Informatics Centre  </span> -->
+                                 <h5 class="item-period">Jan 2023 &ndash; Dec 2024</h5>
                               </div>
                               <div class="divider"></div>
                               <div class="right-part">
                                  <h4 class="item-title">NRO NC Member & NIR SIG Co-Chair</h4>
-                                 <p>APNIC (elected international role)</p>
+				 <p>
+    				APNIC — Elected in 2022 to represent India's internet community in
+    				Asia-Pacific number resource governance. Served a two-year term on the
+    				Number Resource Organisation Number Council (NRO NC) and as
+    				NIR SIG Co-Chair.
+  				</p>
                               </div>
                            </div>
                            <div class="timeline-item clearfix">
@@ -1901,6 +1928,51 @@
          ulClass: "profile-pagination-wrap align-center mt-4",
       });
    </script>
+
+	<script>
+  	// Security: ensure all external links cannot access window.opener (tabnabbing fix)
+  	(function () {
+    	document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+      	var rel = link.getAttribute('rel') || '';
+      	if (!rel.includes('noopener')) {
+        	link.setAttribute('rel', (rel + ' noopener noreferrer').trim());
+      					}
+    										});
+  			})();
+	
+	// Fix logo alt text: "logo-img" → "" (decorative)
+  	document.querySelectorAll('img[alt="logo-img"]').forEach(function (img) {
+    	img.alt = '';
+    	img.setAttribute('role', 'presentation');
+  	});
+
+	//Fix social links: replace raw URL text with readable labels
+  	var socialMap = {
+    	'linkedin.com/in/gaurav-kansal': {
+      	label: 'LinkedIn',
+      	ariaLabel: 'Gaurav Kansal on LinkedIn'
+    	},
+    	'twitter.com/kansal15': {
+      	label: 'Twitter / X (@kansal15)',
+      	ariaLabel: 'Gaurav Kansal on Twitter / X'
+    	}
+  	};
+ 
+  	document.querySelectorAll('a').forEach(function (a) {
+    	var href = a.href || '';
+    	Object.keys(socialMap).forEach(function (pattern) {
+      	if (href.includes(pattern)) {
+        var info = socialMap[pattern];
+        // Only fix if the link text looks like a raw URL
+        if (a.textContent.includes('http') || a.textContent.includes('www')) {
+          a.textContent = info.label;
+          a.setAttribute('aria-label', info.ariaLabel);
+        }
+      	}
+    	});
+  	});
+
+	</script>
 </body>
 
 </html>
