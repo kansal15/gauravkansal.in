@@ -3,3 +3,5 @@ extra/*
 gauravkansal/*
 CNAME
 .DS_Store
+.vscode
+.vscode/*
