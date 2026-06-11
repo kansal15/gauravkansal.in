@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Cache-control" content="public">
+   <meta property="og:title" content="Gaurav Kansal" />
+   <meta property="og:description"
+      content="Gaurav Kansal is a Joint Director (IT) at the National Informatics Centre and Technical Lead of the Sarvagya - Bharat Public DNS (1.10.10.10). Specialising in DNS, IPv6, SSL/TLS, and enterprise wireless networks." />
+   <meta name="author" content="Gaurav Kansal">
+   <meta name="keywords"
+      content="Gaurav Kansal, DNS, IPv6, NIC, National Informatics Centre, Sarvagya, Bharat Public DNS, 1.10.10.10, 2409::1, NICNET, Wi-Fi, TLS, NRO NC, APNIC, CyberSecurity">
+   <meta property="og:image" content="https://www.gauravkansal.in/v2/img/meta_image.jpg" />
+   <meta property="og:url" content="https://www.gauravkansal.in/v2/index.html" />
+   <meta property="og:type" content="profile" />
+   <meta property="profile:first_name" content="Gaurav" />
+   <meta property="profile:last_name" content="Kansal" />
+   <meta property="profile:gender" content="male" />
+   <meta property="og:title" content="Gaurav Kansal — Senior IT Leader | DNS, IPv6 &amp; Network Security">
+   <meta property="og:site_name" content="Gaurav Kansal">
+   <meta property="og:locale" content="en_IN">
+
+   <!-- ── Twitter / X card (was missing entirely) ── -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:site" content="@kansal15">
+   <meta name="twitter:creator" content="@kansal15">
+   <meta name="twitter:title" content="Gaurav Kansal — Senior IT Leader | DNS, IPv6 &amp; Cyber Security">
+   <meta name="twitter:description"
+      content="Joint Director (IT) at NIC · Technical Lead, Bharat Public DNS (1.10.10.10) · Former NRO NC Member at APNIC (2023–2024) · DNS, IPv6, TLS, Wi-Fi.">
+   <meta name="twitter:image" content="https://www.gauravkansal.in/v2/img/meta_image.jpg">
+
+   <!--
+     CONTENT SECURITY POLICY (optional but recommended)
+     Add this HTTP response header on your server, OR as a
+     <meta> tag in <head>. Helps prevent XSS attacks.
+   -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+               font-src 'self' https://fonts.gstatic.com;
+               img-src 'self' data: https:;
+               connect-src 'self' https://www.google-analytics.com;
+               frame-src https://www.googletagmanager.com;">
+
+   <!-- Canonical — tells Google which URL is the authoritative version -->
+   <link rel="canonical" href="https://www.gauravkansal.in/v2/index.html">
+
+   <title>Gaurav Kansal - Senior IT Leader | DNS, IPv6 &amp; Network Security</title>
+   <link rel="shortcut icon" href="img/favicon.png" />
+   <link rel="stylesheet" href="css/reset.css" type="text/css" />
+   <link rel="stylesheet" href="plugins/bootstrap-5.3.7/css/bootstrap.css" type="text/css" />
+   <link rel="stylesheet" href="css/animations.css" type="text/css" />
+   <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css" type="text/css" />
+   <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" />
+   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+   <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+   <style>
+      .content-area {
+         max-width: calc(100% - 260px);
+      }
+
+      .header-photo {
+         width: 150px;
+      }
+
+      .social-links,
+      .header .copyrights {
+         width: 260px;
+
+      }
+
+      /* ------------------------------------------------------------
+         Stat Card Custom Styling Override (Derived from main.css rules)
+         ------------------------------------------------------------ */
+      .stat-card {
+         text-align: center;
+         padding: 18px 10px;
+         margin-bottom: 15px;
+         background-color: #f9f9f9;
+         /* Aligned with your .portfolio-details & .speakerCard blocks */
+         border: 1px solid #ededed;
+         /* Aligned with your standard component border line weight */
+         border-radius: 20px;
+         /* Persisted custom corner-rounding aspect rules */
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, .05);
+         /* Soft main.css element drop shadow rules */
+         transition: all 0.3s ease-in-out;
+      }
+
+      .stat-card:hover {
+         transform: translateY(-4px);
+         box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.1);
+      }
+
+      /* --- High-Emphasis Numeric Counter Layer --- */
+      .stat-card .num {
+         font-size: 2rem;
+         font-weight: 700;
+         color: #04b4e0;
+         /* Leverages your native main.css theme highlight color accent */
+         line-height: 1.2;
+         font-family: 'Poppins', Helvetica, sans-serif;
+      }
+
+      /* --- Content Context Descriptive Text Labels --- */
+      .stat-card .label {
+         font-size: 0.75rem;
+         color: #555555;
+         /* Matches your general master typography color setting */
+         letter-spacing: 0.3px;
+         margin-top: 4px;
+         font-weight: 400;
+         font-family: 'Poppins', Helvetica, sans-serif;
+      }
+
+      @keyframes status-pulse {
+         0% {
+            transform: scale(0.95);
+            opacity: 0.5;
+            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+         }
+
+         70% {
+            transform: scale(1);
+            opacity: 1;
+            box-shadow: 0 0 0 6px rgba(40, 167, 69, 0);
+         }
+
+         100% {
+            transform: scale(0.95);
+            opacity: 0.5;
+            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+         }
+      }
+
+      @media only screen and (min-width: 1025px) {
+         .header {
+            max-width: 260px;
+         }
+      }
+   </style>
+
+
+</head>
+
+<body>
+   <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
+
+   <div class="page">
+      <div class="page-content">
+
+         <header id="site_header" class="header mobile-menu-hide">
+            <div class="switchHindi">
+               <p><a href="https://xn--p2br8c.xn--i1b1b6exa.xn--h2brj9c/" target="_blank">Switch to हिंदी</a></p>
+            </div>
+            <div class="header-content">
+               <div class="header-photo">
+                  <img src="img/profile.jpeg" alt="Gaurav Kansal" />
+               </div>
+               <div class="header-titles">
+                  <div class="d-flex justify-content-center">
+                     <img src="img/gk-logo-white.png" alt="" role="presentation" class="logo-img" />
+                  </div>
+                  <h4>Senior IT Leader</h4>
+               </div>
+            </div>
+
+            <ul class="main-menu">
+               <li>
+                  <a href="index.html#home">
+                     <span class="menu-icon lnr lnr-home"></span>
+                     <span class="link-text">Home</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="index.html#about-me">
+                     <span class="menu-icon lnr lnr-user"></span>
+                     <span class="link-text">About Me</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="index.html#resume">
+                     <span class="menu-icon lnr lnr-graduation-hat"></span>
+                     <span class="link-text">Resume</span>
+                  </a>
+               </li>
+               <li class="active">
+                  <a href="index.html#portfolio">
+                     <span class="menu-icon lnr lnr-briefcase"></span>
+                     <span class="link-text">Portfolio</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="index.html#blog">
+                     <span class="menu-icon lnr lnr-book"></span>
+                     <span class="link-text">Blog</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="index.html#speaking">
+                     <span class="menu-icon lnr lnr-mic"></span>
+                     <span class="link-text">Speaking</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="index.html#contact">
+                     <span class="menu-icon lnr lnr-envelope"></span>
+                     <span class="link-text">Contact</span>
+                  </a>
+               </li>
+            </ul>
+
+            <div class="social-links">
+               <ul>
+                  <li>
+                     <a href="mailto:gkansal.me@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                  </li>
+                  <li>
+                     <a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank"
+                        aria-label="Gaurav Kansal on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                     <a href="https://twitter.com/kansal15" target="_blank" aria-label="Gaurav Kansal on Twitter / X"><i
+                           class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                     <a href="https://github.com/kansal15" target="_blank"><i class="fab fa-github"></i></a>
+                  </li>
+               </ul>
+            </div>
+            <div class="copyrights">© 2019-2026 All rights reserved.</div>
+         </header>
+
+         <div class="mobile-section">
+            <div class="mobile-view">
+               <div style="padding: 6px 0 0 10px;">
+                  <img src="img/gk-logo-white.png" alt="" role="presentation" class="logo-img" />
+               </div>
+               <div class="menu-toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </div>
+         </div>
+
+         <div class="content-area">
+            <div class="single-page-content">
+
+               <div class="page-title">
+                  <h2>TLS <span>Labs</span></h2>
+               </div>
+
+               <div class="section-content">
+
+                  <div class="row align-items-center mb-5">
+                     <div class="col-md-7">
+                        <h3 class="font-weight-bold mb-3">Everything SSL/TLS, in One Place</h3>
+                        <p style="text-align: justify;">
+                           A comprehensive reference built to solve recurring architectural questions. It documents the
+                           full SSL/TLS stack from early legacy definitions up to secure production criteria including
+                           the handshake mechanism, cipher suites, PKI trust infrastructure, and real-world failure
+                           analyses.
+                        </p>
+                        <ul class="knowledges mt-3">
+                           <li>TLS 1.0 – 1.3</li>
+                           <li>PKI &amp; X.509</li>
+                           <li>Cipher Suites</li>
+                           <li>Certificate Authorities</li>
+                           <li>Cyber Security</li>
+                        </ul>
+                     </div>
+                     <div class="col-md-5 text-center mt-4 mt-md-0">
+                        <img src="img/portfolio/TlsLab.png" alt="TLS Labs Platform Preview"
+                           class="img-fluid rounded border shadow-sm"
+                           style="max-height: 240px; width: 100%; object-fit: cover;">
+                     </div>
+                  </div>
+
+                  <div class="white-space-30"></div>
+
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-7">
+                        <div class="block-title">
+                           <h3>Why I <span>Built This</span></h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 justify-content-center g-4">
+
+                     <div class="col">
+                        <div class="stat-card">
+                           <span class="num">30+</span>
+                           <div class="label">Years of history</div>
+                        </div>
+                     </div>
+
+                     <div class="col">
+                        <div class="stat-card">
+                           <span class="num">10+</span>
+                           <div class="label">Deep-dive posts</div>
+                        </div>
+                     </div>
+
+                     <div class="col">
+                        <div class="stat-card">
+                           <span class="num">6</span>
+                           <div class="label">Protocol versions</div>
+                        </div>
+                     </div>
+
+                     <div class="col">
+                        <div class="stat-card">
+                           <span class="num">NIC</span>
+                           <div class="label">Govt. reference</div>
+                        </div>
+                     </div>
+
+                  </div>
+
+
+                  <div class="white-space-40"></div>
+
+
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-7">
+                        <div class="block-title">
+                           <h3>Why I <span>Built This</span></h3>
+                        </div>
+                        <p style="text-align: justify;">
+                           It started with a question — actually, with the same question being asked over and over.
+                           Colleagues at NIC would come to me: "What cipher suite should we configure?", "Why did this
+                           certificate fail validation?", "What's the actual difference between TLS 1.2 and 1.3?". I'd
+                           answer, and a week later someone else would ask the same thing.
+                        </p>
+                        <p style="text-align: justify;">
+                           At some point I decided that answering individually wasn't scaling well, and I'd be better
+                           off putting everything in one place properly — with the context, the history, and the "why"
+                           behind each piece, not just the configuration commands. TLS Labs grew from that decision.
+                        </p>
+                        <p style="text-align: justify;">
+                           It started as an internal reference at NIC. Then colleagues from other organisations started
+                           finding it useful, so I made it public. The blog posts on TLS session resumption, the
+                           ServerKeyExchange vulnerability, FREAK, cipher suites, and CA failures all came out of
+                           material I originally wrote for this — the blog is essentially TLS Labs in longform.
+                        </p>
+                        <p style="text-align: justify;">
+                           The goal was always the same: make the SSL/TLS world navigable for someone who knows
+                           networking but hasn't spent years in cryptography. Not a textbook. Not a vendor doc.
+                           Something you'd actually read.
+                        </p>
+                     </div>
+                     <div class="col-xs-12 col-sm-5">
+                        <div class="block-title">
+                           <h3>Project <span>Details</span></h3>
+                        </div>
+
+                        <div class="speakerCard p-4"
+                           style="background-color: #f9f9f9;     border: 1px solid #ededed; border-radius: 16px; box-shadow: 0px 10px 25px -10px rgba(0,0,0,0.06); transition: all 0.3s ease-in-out;">
+                           <div class="row g-3">
+
+                              <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
+                                 <div class="d-flex align-items-start gap-3">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                       style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
+                                       <i class="fa-solid fa-shield-halved" style="font-size: 16px;"></i>
+                                    </div>
+                                    <div>
+                                       <h5 class="m-0 text-uppercase"
+                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                          Domain Target</h5>
+                                       <h4 class="m-0 mt-1"
+                                          style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
+                                          Security / TLS / Public Key Infrastructure</h4>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
+                                 <div class="d-flex align-items-start gap-3">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                       style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
+                                       <i class="fa-solid fa-users-gear" style="font-size: 15px;"></i>
+                                    </div>
+                                    <div>
+                                       <h5 class="m-0 text-uppercase"
+                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                          Primary Audience</h5>
+                                       <h4 class="m-0 mt-1"
+                                          style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
+                                          Network Engineers &amp; Security Teams</h4>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
+                                 <div class="d-flex align-items-start gap-3">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                       style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
+                                       <i class="fa-solid fa-building-shield" style="font-size: 15px;"></i>
+                                    </div>
+                                    <div>
+                                       <h5 class="m-0 text-uppercase"
+                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                          Hosting Enterprise</h5>
+                                       <h4 class="m-0 mt-1"
+                                          style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
+                                          National Informatics Centre (NIC)</h4>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="d-flex align-items-start gap-3">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                       style="width: 36px; height: 36px; background-color: rgba(40, 167, 69, 0.1); color: #28a745; border-radius: 10px; flex-shrink: 0;">
+                                       <i class="fa-solid fa-circle-check" style="font-size: 16px;"></i>
+                                    </div>
+                                    <div>
+                                       <h5 class="m-0 text-uppercase"
+                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                          Operational Status</h5>
+                                       <div class="d-flex align-items-center gap-2 mt-1">
+                                          <h4 class="m-0" style="font-size: 14px; font-weight: 600; color: #28a745;">
+                                             Live &amp; Active</h4>
+                                          <span class="d-inline-block rounded-circle position-relative"
+                                             style="width: 8px; height: 8px; background-color: #28a745; animation: status-pulse 2s infinite ease-in-out;"></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="white-space-40"></div>
+
+
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                           <div class="block-title">
+                              <h3>Ecosystem <span>Coverage</span></h3>
+                           </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">01 — Foundation</h4>
+                              <p class="m-0 small text-muted">Tracking evolutionary version parameters from historical
+                                 roots to operational standards.</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">02 — Handshake Mechanics</h4>
+                              <p class="m-0 small text-muted">Complete maps covering full parameter validation,
+                                 abbreviations, and token validation patterns.</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">03 — Cryptographic Selectors</h4>
+                              <p class="m-0 small text-muted">Evaluation schemas for balancing data integrity and
+                                 performance criteria across secure cipher suites.</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">04 — Trust Chains</h4>
+                              <p class="m-0 small text-muted">Root distribution mappings, intermediary links, and active
+                                 cross-verification behaviors.</p>
+                           </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">05 — Epic CA Fails</h4>
+                              <p class="m-0 small text-muted">Documented structural reviews of high-profile Certificate
+                                 Authority cross-verification trust collapses.</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">06 — Vulnerability Vectors</h4>
+                              <p class="m-0 small text-muted">Analysing algorithmic flaws and threat vectors behind
+                                 exploits like FREAK, POODLE, and BEAST.</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">07 — Protocol Extensions</h4>
+                              <p class="m-0 small text-muted">Deep dive into operational mechanics powering SNI, ALPN
+                                 validation, and OCSP stapling infrastructure.</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                           <div class="speakerCard p-3 h-100">
+                              <h4 class="speaker-h4">08 — Production Baseline</h4>
+                              <p class="m-0 small text-muted">Implementation blueprints for configuring strict HSTS
+                                 headers and perfect forward secrecy profiles.</p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="white-space-30"></div>
+
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                           <div class="block-title">
+                              <h3>Protocol <span>Timeline</span></h3>
+                           </div>
+                           <div class="timeline timeline-second-style clearfix">
+                              <div class="timeline-item clearfix">
+                                 <div class="left-part">
+                                    <h5 class="item-period text-danger">1995</h5>
+                                 </div>
+                                 <div class="divider"></div>
+                                 <div class="right-part">
+                                    <h4 class="item-title">SSL 2.0 <span class="badge bg-danger ms-2">Deprecated</span>
+                                    </h4>
+                                    <p class="text-muted">Netscape's first published version. Serious design flaws
+                                       discovered almost immediately. Never safe to use.</p>
+                                 </div>
+                              </div>
+
+                              <div class="timeline-item clearfix">
+                                 <div class="left-part">
+                                    <h5 class="item-period text-danger">1996</h5>
+                                 </div>
+                                 <div class="divider"></div>
+                                 <div class="right-part">
+                                    <h4 class="item-title">SSL 3.0 <span class="badge bg-danger ms-2">Deprecated</span>
+                                    </h4>
+                                    <p class="text-muted">A significant redesign — but still ultimately broken. POODLE
+                                       (2014) finally killed it for good.</p>
+                                 </div>
+                              </div>
+
+                              <div class="timeline-item clearfix">
+                                 <div class="left-part">
+                                    <h5 class="item-period text-warning">1999</h5>
+                                 </div>
+                                 <div class="divider"></div>
+                                 <div class="right-part">
+                                    <h4 class="item-title">TLS 1.0 <span
+                                          class="badge bg-warning text-dark ms-2">Deprecated</span></h4>
+                                    <p class="text-muted">SSL 3.0 renamed and handed to the IETF. BEAST and POODLE made
+                                       it untenable. Formally deprecated by RFC 8996 in 2021.</p>
+                                 </div>
+                              </div>
+
+                              <div class="timeline-item clearfix">
+                                 <div class="left-part">
+                                    <h5 class="item-period text-warning">2006</h5>
+                                 </div>
+                                 <div class="divider"></div>
+                                 <div class="right-part">
+                                    <h4 class="item-title">TLS 1.1 <span
+                                          class="badge bg-warning text-dark ms-2">Deprecated</span></h4>
+                                    <p class="text-muted">Added protection against CBC padding attacks but fell short in
+                                       other areas. Deprecated RFC 8996 alongside TLS 1.0.</p>
+                                 </div>
+                              </div>
+
+                              <div class="timeline-item clearfix">
+                                 <div class="left-part">
+                                    <h5 class="item-period text-primary">2008</h5>
+                                 </div>
+                                 <div class="divider"></div>
+                                 <div class="right-part">
+                                    <h4 class="item-title">TLS 1.2 <span class="badge bg-primary ms-2">Legacy
+                                          Active</span></h4>
+                                    <p class="text-muted">Widely deployed architecture layer. Supports authenticated
+                                       encryption parameters (AEAD) and SHA-256 data streams.</p>
+                                 </div>
+                              </div>
+                              <div class="timeline-item clearfix">
+                                 <div class="left-part">
+                                    <h5 class="item-period text-success">2018</h5>
+                                 </div>
+                                 <div class="divider"></div>
+                                 <div class="right-part">
+                                    <h4 class="item-title">TLS 1.3 <span class="badge bg-success ms-2">Current
+                                          Standard</span></h4>
+                                    <p class="text-muted">Optimized transaction framework. Features lower round-trip
+                                       latency handshakes and mandatory forward secrecy constraints.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                           <div class="block-title">
+                              <h3>Deep-Dive <span>Resources</span></h3>
+                           </div>
+                           <div class="row g-3">
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2024/08/tlsTimeLine.html" target="_blank"
+                                          rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> TLS Timeline
+                                          Analysis</a></h4>
+                                    <p class="m-0 small text-muted">A clear, step-by-step structural chronology of
+                                       standard enhancements across the timeline.</p>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2024/08/epicCAFails.html" target="_blank"
+                                          rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Epic CA
+                                          Fails Review</a></h4>
+                                    <p class="m-0 small text-muted">Documented root-cause reviews of high-profile
+                                       Certificate Authority operational trust failures.</p>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2015/09/cipher-suites.html" target="_blank"
+                                          rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Cipher Suite
+                                          Evaluation</a></h4>
+                                    <p class="m-0 small text-muted">Operational classification matrices for prioritizing
+                                       cipher definitions and weeding out weak crypto.</p>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2015/09/tls-session-resumption.html"
+                                          target="_blank" rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Session
+                                          Resumption Infrastructure</a></h4>
+                                    <p class="m-0 small text-muted">Technical deep-dive explaining abbreviated
+                                       handshakes, state tokens, and secure cache handling.</p>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2015/09/flaw-in-serverkeyexchange-messages-of.html"
+                                          target="_blank" rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i>
+                                          ServerKeyExchange Message Flaws</a></h4>
+                                    <p class="m-0 small text-muted">An analytical breakdown of the cryptographic
+                                       validation vulnerabilities inside early TLS versions.</p>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2015/09/freak-factoring-attack-on-rsa-export.html"
+                                          target="_blank" rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> FREAK
+                                          Vulnerability Vector</a></h4>
+                                    <p class="m-0 small text-muted">Dissecting the factoring mechanics that weaponized
+                                       legacy export-grade RSA keys against production systems.</p>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2015/09/server-name-indication-sni.html"
+                                          target="_blank" rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> SNI
+                                          Extension Roadmap</a></h4>
+                                    <p class="m-0 small text-muted">Explaining the protocol layer additions that
+                                       unlocked multi-tenant secure virtual hosting over shared server IPs.</p>
+                                 </div>
+                              </div>
+
+                              <div class="col-12">
+                                 <div class="speakerCard p-3">
+                                    <h4 class="speaker-h4 m-0"><a
+                                          href="https://blog.gauravkansal.in/2015/09/ca-certificate-chain-and-traceroute-of.html"
+                                          target="_blank" rel="noopener noreferrer"><i
+                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Chain
+                                          Verification &amp; Network Paths</a></h4>
+                                    <p class="m-0 small text-muted">How systems map an untrusted site credential back up
+                                       through intermediaries to a hardware security module root.</p>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="white-space-50"></div>
+
+                     <div class="row">
+                        <div class="col-12 text-center">
+                           <a href="index.html#portfolio" class="btn btn-primary btn-sm"><i
+                                 class="fa-solid fa-arrow-left me-2"></i> Return to Portfolio</a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/modernizr.custom.js"></script>
+      <script src="js/animating.js"></script>
+      <script src="plugins/bootstrap-5.3.7/js/bootstrap.min.js"></script>
+      <script src="plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+      <script src="js/jquery.shuffle.min.js"></script>
+      <script src="js/masonry.pkgd.min.js"></script>
+      <script src="plugins/owlcarousel/js/owl.carousel.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/validator.js"></script>
+      <script src="js/paginathing.min.js"></script>
+      <script src="js/imagesloaded.pkgd.min.js"></script>
+      <script src="js/main.js"></script>
+
+      <script>
+         $('#blogPage').load('include/blogPage.html');
+
+         $('#speakerPage').load('include/speakerPage.html');
+
+         setTimeout(function () {
+            $(".blogPage").paginathing({
+               perPage: 6,
+               insertAfter: ".blogPage",
+               limitPagination: 5,
+               ulClass: "profile-pagination-wrap align-center mt-4",
+            })
+         }, 100);
+      </script>
+
+      <script>
+         // Security: ensure all external links cannot access window.opener (tabnabbing fix)
+         (function () {
+            document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+               var rel = link.getAttribute('rel') || '';
+               if (!rel.includes('noopener')) {
+                  link.setAttribute('rel', (rel + ' noopener noreferrer').trim());
+               }
+            });
+         })();
+
+         // Fix logo alt text: "logo-img" → "" (decorative)
+         document.querySelectorAll('img[alt="logo-img"]').forEach(function (img) {
+            img.alt = '';
+            img.setAttribute('role', 'presentation');
+         });
+
+         //Fix social links: replace raw URL text with readable labels
+         var socialMap = {
+            'linkedin.com/in/gaurav-kansal': {
+               label: 'LinkedIn',
+               ariaLabel: 'Gaurav Kansal on LinkedIn'
+            },
+            'twitter.com/kansal15': {
+               label: 'Twitter / X (@kansal15)',
+               ariaLabel: 'Gaurav Kansal on Twitter / X'
+            }
+         };
+
+         document.querySelectorAll('a').forEach(function (a) {
+            var href = a.href || '';
+            Object.keys(socialMap).forEach(function (pattern) {
+               if (href.includes(pattern)) {
+                  var info = socialMap[pattern];
+                  // Only fix if the link text looks like a raw URL
+                  if (a.textContent.includes('http') || a.textContent.includes('www')) {
+                     a.textContent = info.label;
+                     a.setAttribute('aria-label', info.ariaLabel);
+                  }
+               }
+            });
+         });
+
+      </script>
+</body>
+
+</html>
