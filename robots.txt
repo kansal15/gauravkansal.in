@@ -1,9 +1,11 @@
 User-agent: *
-Allow: /
 
 # Prevent duplication by blocking older or development paths
 Disallow: /v1/
 Disallow: /staging/
 
+# The canonical version is v2 — allow everything under it
+Allow: /v2/
+
 # Explicitly declare your sitemap location
-Sitemap: https://gauravkansal.in
+Sitemap: https://www.gauravkansal.in/sitemap.xml
