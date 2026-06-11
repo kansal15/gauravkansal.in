@@ -115,7 +115,9 @@
                         </ul>
                     </div>
 
-                    <div class="copyrights">© 2019-2025 गौरव कंसल. सर्वाधिकार सुरक्षित</div>
+                    <div class="copyrights">© 2019-<span id="year"></span> गौरव कंसल. सर्वाधिकार सुरक्षित</div>
+                     
+                    <script> document.getElementById('year').textContent = new Date().getFullYear(); </script>
                 </header>
 
                 <!-- Mobile Navigation -->
