@@ -457,7 +457,7 @@
 
                                  <figure class="item lbaudio" data-groups='["category_all", "category_tls"]'>
                                     <div class="portfolio-details">
-                                       <h4 class="name">TLS Labs — One-stop TLS Resource</h4>
+                                       <h4 class="name">TLS Labs — Everything Related to Cryptography, All in One Place</h4>
                                        <h6 class="portfolio-subtext">TLS · SSL · PKI</h6>
                                        <p>Comprehensive reference and tooling for SSL/TLS configuration, certificate
                                           management, and cipher suite analysis. Used as an internal resource at NIC.
@@ -535,8 +535,22 @@
 
                <section data-id="speaking" class="animated-section">
                   <div class="page-title">
-                     <h2>Speaking & <span>Conferences</span></h2>
+                  <h2>Speaking & <span>Conferences</span></h2>
                   </div>
+                  <div class="section-content">
+                     <div class="row speakingPage">
+                        <div class="col-xs-12 col-sm-12">
+                           <div class="block-title">
+                              <h3>Community Roles & Memberships</h3>
+                           </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12">
+                           <div id="communityRolePage"></div>
+                        </div>
+                     </div>
+                  </div>
+
+                  
                   <div class="section-content">
                      <div class="row speakingPage">
                         <div class="col-xs-12 col-sm-12">
@@ -545,10 +559,9 @@
                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-12">
-
                            <div id="speakerPage"></div>
                         </div>
-                     </div>
+                        </div>
                   </div>
                </section>
                <!-- Contact Subpage -->
@@ -615,7 +628,9 @@
    <script>
        $('#blogPage').load('include/blogPage.html');
 
+      $('#communityRolePage').load('include/communityRolePage.html');
       $('#speakerPage').load('include/speakerPage.html');
+
 
       setTimeout(function() {
          $(".blogPage").paginathing({
