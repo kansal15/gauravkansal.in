@@ -123,7 +123,7 @@ p {
 .page-content {
   position: relative;
   width: 100%;
-  max-width: 1400px;
+  max-width: 95%;
   min-height: 90vh;
   margin: 5vh auto;
   padding: 0;
@@ -459,8 +459,6 @@ input[type="submit"]:focus {
 /* --- Social Links --- */
 .social-links {
   margin: 10px 0;
-  bottom: 0;
-  position: absolute;
   width: 300px;
   position: absolute;
   bottom: 0;
@@ -1723,9 +1721,10 @@ input[type="text"],
 .portfolio-grid figure .category {
   display: inline-block;
   padding: 2px 7px;
-  background-color: #04b4e0;
+  background-color: #a5a5a5;
   color: #fff;
   font-size: 12px;
+  font-style: italic;
   line-height: 1.2em;
   border-radius: 4px;
   top: 15px;
@@ -1970,7 +1969,8 @@ opacity: 1;
   color: #a6a6a6;
 }
 
-.blog-card .btn-transparent {
+.blog-card .btn-transparent, 
+.portfolio-link .btn-transparent{
   color: #fff;
   border-radius: 6px;
   margin-right: 2px;
@@ -1978,6 +1978,11 @@ opacity: 1;
   background-color: #04b4e0;
   font-size: 14px;
   margin-top: 10px;
+}
+
+.portfolio-link .btn-transparent{
+  position: relative;
+  margin-top: 0;
 }
 
 /* --- End of Blog --- */
@@ -3033,8 +3038,8 @@ blockquote {
 /* v1.1 */
 .lm-animated-bg {
   position: absolute;
-  width: 0;
-  height: 0;
+  width: auto;
+  height: auto;
   top: -28px;
   left: -28px;
   right: -28px;
