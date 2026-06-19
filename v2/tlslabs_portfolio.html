@@ -57,17 +57,18 @@
    <link rel="stylesheet" href="css/main.css" type="text/css" />
 
    <style>
-      .page-title.heading{
+      .page-title.heading {
          padding-right: 0;
          padding-bottom: 0;
          margin-bottom: 0;
       }
 
-      .page-title:after{
-         content: none;;
+      .page-title:after {
+         content: none;
+         ;
       }
 
-      .page-title.heading h2{
+      .page-title.heading h2 {
          display: inline-block;
          position: relative;
          padding-right: 25px;
@@ -75,7 +76,7 @@
          margin-bottom: 0;
       }
 
-      .page-title.heading h2:after{
+      .page-title.heading h2:after {
          position: absolute;
          opacity: 0.45;
          top: 10px;
@@ -92,27 +93,36 @@
          z-index: 0;
       }
 
-      #sidebarToggle{
+      #sidebarToggle {
          position: absolute;
          top: 30px;
          border: 1px solid #ededed;
          background-color: #fff;
-         z-index: 9;
+         z-index: 100;
          padding: 8px 10px;
          border-radius: 20px;
          left: -15px;
       }
 
-      #sidebarToggle i {
-    transition: transform 0.3s ease;
-    z-index: 9;
-    color: #000;
-}
+      #sidebarToggle:hover {
+         background-color: #0293b8;
+         color: #ffffff;
+      }
 
-/* Rotated state */
-#sidebarToggle i.rotated {
-    transform: rotate(180deg);
-}
+      #sidebarToggle i {
+         transition: transform 0.3s ease;
+         z-index: 9;
+         color: #000;
+      }
+
+      #sidebarToggle:hover i {
+         color: #ffffff;
+      }
+
+      /* Rotated state */
+      #sidebarToggle i.rotated {
+         transform: rotate(180deg);
+      }
 
 
       #contentarea {
@@ -122,8 +132,8 @@
       }
 
       #contentarea.open {
-    max-width: calc(100% - 240px);
-}
+         max-width: calc(100% - 240px);
+      }
 
       .header-photo {
          width: 150px;
@@ -204,9 +214,49 @@
          }
       }
 
+      .speakerCard {
+         border-radius: 12px;
+         transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .speakerCard:hover {
+         box-shadow: 0 6px 15px rgba(4, 180, 224, 0.08);
+         transform: translateY(-3px);
+         border-color: #04b4e0;
+      }
+
+      .speakerCard .speaker-h4 {
+         font-size: 14px;
+         font-weight: 600;
+      }
+
       @media only screen and (min-width: 1025px) {
          .header {
             max-width: 240px;
+         }
+      }
+
+      @media only screen and (max-width: 1024px) {
+         #sidebarToggle {
+            display: none !important;
+         }
+
+         #contentarea {
+            max-width: calc(100% - 0px);
+         }
+
+         #contentarea.open {
+            max-width: calc(100% - 0px);
+         }
+         .page-content {
+            max-width: 100%;
+         }
+      }
+
+      @media only screen and (max-width: 765px) {
+         .border-xs-0{
+            border-width: 0px !important;
+
          }
       }
    </style>
@@ -316,183 +366,505 @@
          </div>
 
          <div class="content-area" id="contentarea">
-            <button id="sidebarToggle" class="btn d-lg-flex align-items-center justify-content-center" aria-label="Toggle Navigation Sidebar">
-               <i class="fa-solid fa-chevron-right"></i>
-            </button>
-            <div class="single-page-content">
+            <div class="animated-sections">
+               <button id="sidebarToggle" class="btn d-lg-flex align-items-center justify-content-center"
+                  aria-label="Toggle Navigation Sidebar">
+                  <i class="fa-solid fa-chevron-right"></i>
+               </button>
+               <section data-id="home" class="animated-section start-page">
 
-               <div class="page-title heading">
-                  <h2>TLS <span>Labs</span></h2>
-              
-                  <p class="font-weight-bold mb-3">Everything Related to Cryptography, All in One Place</p>
-               </div>
-               <div class="section-content">
+                  <div class="page-title heading">
+                     <h2>TLS <span>Labs</span></h2>
 
-                  <div class="row align-items-center mb-5">
-                     <div class="col-md-12">
-                        
-                        <ul class="knowledges mt-3">
-                           <li>TLS 1.0 – 1.3</li>
-                           <li>PKI &amp; X.509</li>
-                           <li>Cipher Suites</li>
-                           <li>Certificate Authorities</li>
-                           <li>Cyber Security</li>
-                        </ul>
-                     </div>
-                     <!--
+                     <p class="font-weight-bold mb-3">Everything Related to Cryptography, All in One Place</p>
+                  </div>
+                  <div class="section-content">
+
+                     <div class="row align-items-center mb-5">
+                        <div class="col-md-12">
+
+                           <ul class="knowledges mt-3">
+                              <li>TLS 1.0 – 1.3</li>
+                              <li>PKI &amp; X.509</li>
+                              <li>Cipher Suites</li>
+                              <li>Certificate Authorities</li>
+                              <li>Cyber Security</li>
+                           </ul>
+                        </div>
+                        <!--
                      <div class="col-md-5 text-center mt-4 mt-md-0">
                         <img src="img/portfolio/TlsLab.png" alt="TLS Labs Platform Preview"
                            class="img-fluid rounded border shadow-sm"
                            style="max-height: 240px; width: 100%; object-fit: cover;">
                      </div>
                      -->
-                  </div>
-
-                 
-
-                  
-                  <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 justify-content-center g-4">
-
-                     <div class="col">
-                        <div class="stat-card">
-                           <span class="num">30+</span>
-                           <div class="label">Years of SSL history</div>
-                        </div>
                      </div>
 
-                     <div class="col">
-                        <div class="stat-card">
-                           <span class="num">10+</span>
-                           <div class="label">Deep-dive blogs</div>
+
+
+
+                     <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 justify-content-center g-4">
+
+                        <div class="col">
+                           <div class="stat-card">
+                              <span class="num">30+</span>
+                              <div class="label">Years of SSL history</div>
+                           </div>
                         </div>
+
+                        <div class="col">
+                           <div class="stat-card">
+                              <span class="num">10+</span>
+                              <div class="label">Deep-dive blogs</div>
+                           </div>
+                        </div>
+
+                        <div class="col">
+                           <div class="stat-card">
+                              <span class="num">6</span>
+                              <div class="label">Protocol versions</div>
+                           </div>
+                        </div>
+
+                        <div class="col">
+                           <div class="stat-card">
+                              <span class="num">NIC</span>
+                              <div class="label">Primary User</div>
+                           </div>
+                        </div>
+
                      </div>
 
-                     <div class="col">
-                        <div class="stat-card">
-                           <span class="num">6</span>
-                           <div class="label">Protocol versions</div>
+
+                     <div class="white-space-40"></div>
+
+
+                     <div class="row">
+                        <div class="col-12 col-lg-7 pb-4 pb-lg-0">
+                           <div class="block-title">
+                              <h3>Why I <span>Built This</span></h3>
+                           </div>
+                           <p
+                              style="text-align: justify; font-style: italic; color: #555; border-left: 3px solid #04b4e0; padding-left: 12px; margin-bottom: 16px;">
+                              TLS Labs is an internal reference portal I built at NIC to make the SSL/TLS world
+                              genuinely navigable for engineers who know networking but haven't spent years in
+                              cryptography.
+                           </p>
+                           <p style="text-align: justify;">
+                              It started with a question — actually, with the same question being asked over and over.
+                              Colleagues at NIC would come to me: "What cipher suite should we configure?", "Why did
+                              this
+                              certificate fail validation?", "What's the actual difference between TLS 1.2 and 1.3 ?".
+                              I'd
+                              answer, and a week later someone else would ask the same thing.
+                           </p>
+                           <p style="text-align: justify;">
+                              At some point I decided that answering individually wasn't scaling well, and I'd be better
+                              off putting everything in one place properly — with the context, the history, and the
+                              "why"
+                              behind each piece, not just the configuration commands. TLS Labs grew from that decision.
+                           </p>
+                           <p style="text-align: justify;">
+                              It started as an internal reference at NIC. Then colleagues from other organisations
+                              started
+                              finding it useful, so I made it public, within the Government network, i.e., NICNET. The
+                              blog posts on TLS session resumption, the
+                              ServerKeyExchange vulnerability, FREAK, cipher suites, and CA failures all came out of
+                              material I originally wrote for this — the blog is essentially TLS Labs in longform.
+                           </p>
+                           <p style="text-align: justify;">
+                              The goal was always the same: make the SSL/TLS world navigable for someone who knows
+                              networking but hasn't spent years in cryptography. Not a textbook. Not a vendor doc.
+                              Something you'd actually read.
+                           </p>
                         </div>
-                     </div>
+                        <div class="col-12 col-lg-5">
+                           <div class="block-title">
+                              <h3>Project <span>Details</span></h3>
+                           </div>
 
-                     <div class="col">
-                        <div class="stat-card">
-                           <span class="num">NIC</span>
-                           <div class="label">Primary User</div>
-                        </div>
-                     </div>
+                           <div class="speakerCard p-4"
+                              style="background-color: #f9f9f9;     border: 1px solid #ededed; border-radius: 16px; box-shadow: 0px 10px 25px -10px rgba(0,0,0,0.06); transition: all 0.3s ease-in-out;">
+                              <div class="row g-3">
 
-                  </div>
-
-
-                  <div class="white-space-40"></div>
-
-
-                  <div class="row">
-                     <div class="col-xs-12 col-sm-7">
-                        <div class="block-title">
-                           <h3>Why I <span>Built This</span></h3>
-                        </div>
-                        <p style="text-align: justify; font-style: italic; color: #555; border-left: 3px solid #04b4e0; padding-left: 12px; margin-bottom: 16px;">
-                         TLS Labs is an internal reference portal I built at NIC to make the SSL/TLS world genuinely navigable for engineers who know networking but haven't spent years in cryptography.
-                        </p>
-                        <p style="text-align: justify;">
-                           It started with a question — actually, with the same question being asked over and over.
-                           Colleagues at NIC would come to me: "What cipher suite should we configure?", "Why did this
-                           certificate fail validation?", "What's the actual difference between TLS 1.2 and 1.3 ?". I'd
-                           answer, and a week later someone else would ask the same thing.
-                        </p>
-                        <p style="text-align: justify;">
-                           At some point I decided that answering individually wasn't scaling well, and I'd be better
-                           off putting everything in one place properly — with the context, the history, and the "why"
-                           behind each piece, not just the configuration commands. TLS Labs grew from that decision.
-                        </p>
-                        <p style="text-align: justify;">
-                           It started as an internal reference at NIC. Then colleagues from other organisations started
-                           finding it useful, so I made it public, within the Government network, i.e., NICNET. The blog posts on TLS session resumption, the
-                           ServerKeyExchange vulnerability, FREAK, cipher suites, and CA failures all came out of
-                           material I originally wrote for this — the blog is essentially TLS Labs in longform.
-                        </p>
-                        <p style="text-align: justify;">
-                           The goal was always the same: make the SSL/TLS world navigable for someone who knows
-                           networking but hasn't spent years in cryptography. Not a textbook. Not a vendor doc.
-                           Something you'd actually read.
-                        </p>
-                     </div>
-                     <div class="col-xs-12 col-sm-5">
-                        <div class="block-title">
-                           <h3>Project <span>Details</span></h3>
-                        </div>
-
-                        <div class="speakerCard p-4"
-                           style="background-color: #f9f9f9;     border: 1px solid #ededed; border-radius: 16px; box-shadow: 0px 10px 25px -10px rgba(0,0,0,0.06); transition: all 0.3s ease-in-out;">
-                           <div class="row g-3">
-
-                              <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <div class="d-flex align-items-center justify-content-center"
-                                       style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
-                                       <i class="fa-solid fa-shield-halved" style="font-size: 16px;"></i>
+                                 <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
+                                    <div class="d-flex align-items-start gap-3">
+                                       <div class="d-flex align-items-center justify-content-center"
+                                          style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
+                                          <i class="fa-solid fa-shield-halved" style="font-size: 16px;"></i>
+                                       </div>
+                                       <div>
+                                          <h5 class="m-0 text-uppercase"
+                                             style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                             Domain</h5>
+                                          <h4 class="m-0 mt-1"
+                                             style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
+                                             Security · TLS · PKI</h4>
+                                       </div>
                                     </div>
-                                    <div>
-                                       <h5 class="m-0 text-uppercase"
-                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
-                                          Domain</h5>
-                                       <h4 class="m-0 mt-1"
-                                          style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
-                                          Security · TLS · PKI</h4>
+                                 </div>
+
+                                 <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
+                                    <div class="d-flex align-items-start gap-3">
+                                       <div class="d-flex align-items-center justify-content-center"
+                                          style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
+                                          <i class="fa-solid fa-users-gear" style="font-size: 15px;"></i>
+                                       </div>
+                                       <div>
+                                          <h5 class="m-0 text-uppercase"
+                                             style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                             Primary Audience</h5>
+                                          <h4 class="m-0 mt-1"
+                                             style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
+                                             Network Engineers &amp; Security Teams</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
+                                    <div class="d-flex align-items-start gap-3">
+                                       <div class="d-flex align-items-center justify-content-center"
+                                          style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
+                                          <i class="fa-solid fa-building-shield" style="font-size: 15px;"></i>
+                                       </div>
+                                       <div>
+                                          <h5 class="m-0 text-uppercase"
+                                             style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                             Hosting Enterprise</h5>
+                                          <h4 class="m-0 mt-1"
+                                             style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
+                                             National Informatics Centre (NIC)</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12">
+                                    <div class="d-flex align-items-start gap-3">
+                                       <div class="d-flex align-items-center justify-content-center"
+                                          style="width: 36px; height: 36px; background-color: rgba(40, 167, 69, 0.1); color: #28a745; border-radius: 10px; flex-shrink: 0;">
+                                          <i class="fa-solid fa-circle-check" style="font-size: 16px;"></i>
+                                       </div>
+                                       <div>
+                                          <h5 class="m-0 text-uppercase"
+                                             style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
+                                             Operational Status</h5>
+                                          <div class="d-flex align-items-center gap-2 mt-1">
+                                             <h4 class="m-0" style="font-size: 14px; font-weight: 600; color: #28a745;">
+                                                Live &amp; Active</h4>
+                                             <span class="d-inline-block rounded-circle position-relative"
+                                                style="width: 8px; height: 8px; background-color: #28a745; animation: status-pulse 2s infinite ease-in-out;"></span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="white-space-40"></div>
+
+
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12">
+                              <div class="block-title">
+                                 <h3>Ecosystem <span>Coverage</span></h3>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">01 — Foundation</h4>
+                                 <p class=" text-body fw-semibold mb-1">Protocol History & Timeline</p>
+                                 <p class="m-0 small text-muted">
+                                    From SSL 2.0 (1995) to TLS 1.3 (2018) — what changed, what broke, and why each
+                                    version replaced the last.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">02 — Mechanics</h4>
+                                 <p class="text-body fw-semibold mb-1">The TLS Handshake</p>
+                                 <p class="m-0 small text-muted">
+                                    How a client and server negotiate a secure session — full and abbreviated
+                                    handshakes, session resumption, and session tickets.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">03 — Cryptography</h4>
+                                 <p class="text-body fw-semibold mb-1">Cipher Suites</p>
+                                 <p class="m-0 small text-muted">
+                                    How to read a cipher suite name, which ones to use, which to avoid, and why
+                                    export-grade crypto was a disaster waiting to happen.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">04 — Trust</h4>
+                                 <p class="text-body fw-semibold mb-1">PKI & Certificate Chains</p>
+                                 <p class="m-0 small text-muted">
+                                    Root CAs, intermediate CAs, the chain of trust, certificate validation, and what
+                                    happens when any link in that chain is compromised.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">05 — Failures</h4>
+                                 <p class="text-body fw-semibold mb-1">Epic CA Fails</p>
+                                 <p class="m-0 small text-muted">
+                                    A documented history of high-profile Certificate Authority failures and
+                                    mis-issuances — DigiNotar, Comodo, WoSign, and others.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">06 — Attacks</h4>
+                                 <p class="text-body fw-semibold mb-1">Known Vulnerabilities</p>
+                                 <p class="m-0 small text-muted">
+                                    FREAK, POODLE, BEAST, Heartbleed — what each attack exploited and what it forced the
+                                    industry to fix. Not just names, but mechanisms.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">07 — Extensions</h4>
+                                 <p class="text-body fw-semibold mb-1">SNI, ALPN & OCSP</p>
+                                 <p class="m-0 small text-muted">
+                                    The TLS extensions that made modern HTTPS possible — Server Name Indication,
+                                    application protocol negotiation, and online certificate status.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+                              <div class="speakerCard p-3 h-100">
+                                 <h4 class="speaker-h4 mb-2">08 — Deployment</h4>
+                                 <p class="text-body fw-semibold mb-1">Configuration & Best Practices</p>
+                                 <p class="m-0 small text-muted">
+                                    What to actually configure — cipher suite selection, certificate management, HSTS,
+                                    certificate transparency, and staying current.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="white-space-30"></div>
+
+                        <div class="row ">
+                           <div class="col-12 col-md-6 pe-md-4 pb-4 pb-lg-0">
+                              <div class="block-title">
+                                 <h3>Protocol <span>Timeline</span></h3>
+                              </div>
+                              <div class="timeline timeline-second-style clearfix">
+                                 <div class="timeline-item clearfix">
+                                    <div class="left-part">
+                                       <h5 class="item-period text-danger">1995</h5>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="right-part">
+                                       <h4 class="item-title">SSL 2.0 <span
+                                             class="badge bg-danger ms-2">Deprecated</span>
+                                       </h4>
+                                       <p class="text-muted">Netscape's first published version. Serious design flaws
+                                          discovered almost immediately. Never safe to use.</p>
+                                    </div>
+                                 </div>
+
+                                 <div class="timeline-item clearfix">
+                                    <div class="left-part">
+                                       <h5 class="item-period text-danger">1996</h5>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="right-part">
+                                       <h4 class="item-title">SSL 3.0 <span
+                                             class="badge bg-danger ms-2">Deprecated</span>
+                                       </h4>
+                                       <p class="text-muted">A significant redesign — but still ultimately broken.
+                                          POODLE
+                                          (2014) finally killed it for good.</p>
+                                    </div>
+                                 </div>
+
+                                 <div class="timeline-item clearfix">
+                                    <div class="left-part">
+                                       <h5 class="item-period text-warning">1999</h5>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="right-part">
+                                       <h4 class="item-title">TLS 1.0 <span
+                                             class="badge bg-warning text-dark ms-2">Deprecated</span></h4>
+                                       <p class="text-muted">SSL 3.0 renamed and handed to the IETF. BEAST and POODLE
+                                          made
+                                          it untenable. Formally deprecated by RFC 8996 in 2021.</p>
+                                    </div>
+                                 </div>
+
+                                 <div class="timeline-item clearfix">
+                                    <div class="left-part">
+                                       <h5 class="item-period text-warning">2006</h5>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="right-part">
+                                       <h4 class="item-title">TLS 1.1 <span
+                                             class="badge bg-warning text-dark ms-2">Deprecated</span></h4>
+                                       <p class="text-muted">Added protection against CBC padding attacks but fell short
+                                          in
+                                          other areas. Deprecated RFC 8996 alongside TLS 1.0.</p>
+                                    </div>
+                                 </div>
+
+                                 <div class="timeline-item clearfix">
+                                    <div class="left-part">
+                                       <h5 class="item-period text-primary">2008</h5>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="right-part">
+                                       <h4 class="item-title">TLS 1.2 <span class="badge bg-primary ms-2">Legacy
+                                             Active</span></h4>
+                                       <p class="text-muted">Widely deployed architecture layer. Supports authenticated
+                                          encryption parameters (AEAD) and SHA-256 data streams.</p>
+                                    </div>
+                                 </div>
+                                 <div class="timeline-item clearfix">
+                                    <div class="left-part">
+                                       <h5 class="item-period text-success">2018</h5>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="right-part">
+                                       <h4 class="item-title">TLS 1.3 <span class="badge bg-success ms-2">Current
+                                             Standard</span></h4>
+                                       <p class="text-muted">Optimized transaction framework. Features lower round-trip
+                                          latency handshakes and mandatory forward secrecy constraints.</p>
                                     </div>
                                  </div>
                               </div>
+                           </div>
 
-                              <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <div class="d-flex align-items-center justify-content-center"
-                                       style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
-                                       <i class="fa-solid fa-users-gear" style="font-size: 15px;"></i>
-                                    </div>
-                                    <div>
-                                       <h5 class="m-0 text-uppercase"
-                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
-                                          Primary Audience</h5>
-                                       <h4 class="m-0 mt-1"
-                                          style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
-                                          Network Engineers &amp; Security Teams</h4>
-                                    </div>
-                                 </div>
-                              </div>
 
-                              <div class="col-12 pb-2" style="border-bottom: 1px solid #ededed;">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <div class="d-flex align-items-center justify-content-center"
-                                       style="width: 36px; height: 36px; background-color: rgba(4, 180, 224, 0.1); color: #04b4e0; border-radius: 10px; flex-shrink: 0;">
-                                       <i class="fa-solid fa-building-shield" style="font-size: 15px;"></i>
-                                    </div>
-                                    <div>
-                                       <h5 class="m-0 text-uppercase"
-                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
-                                          Hosting Enterprise</h5>
-                                       <h4 class="m-0 mt-1"
-                                          style="font-size: 14px; font-weight: 500; color: #333; line-height: 1.4;">
-                                          National Informatics Centre (NIC)</h4>
-                                    </div>
-                                 </div>
-                              </div>
+                           <div class="col-12 col-md-6 ps-md-4">
 
-                              <div class="col-12">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <div class="d-flex align-items-center justify-content-center"
-                                       style="width: 36px; height: 36px; background-color: rgba(40, 167, 69, 0.1); color: #28a745; border-radius: 10px; flex-shrink: 0;">
-                                       <i class="fa-solid fa-circle-check" style="font-size: 16px;"></i>
+                              <div class="h-100 border-start border-1 border-xs-0"
+                                 style="border-color: #ededed !important; opacity: 0.85;">
+
+                                 <div class="row g-3 ms-2">
+
+
+                                    <div class="block-title">
+                                       <h3>Deep-Dive <span>Resources</span></h3>
                                     </div>
-                                    <div>
-                                       <h5 class="m-0 text-uppercase"
-                                          style="font-size: 10px; font-weight: 600; letter-spacing: 0.8px; color: #a5a6a7;">
-                                          Operational Status</h5>
-                                       <div class="d-flex align-items-center gap-2 mt-1">
-                                          <h4 class="m-0" style="font-size: 14px; font-weight: 600; color: #28a745;">
-                                             Live &amp; Active</h4>
-                                          <span class="d-inline-block rounded-circle position-relative"
-                                             style="width: 8px; height: 8px; background-color: #28a745; animation: status-pulse 2s infinite ease-in-out;"></span>
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2024/08/tlsTimeLine.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> TLS
+                                                Timeline
+                                                Analysis</a></h4>
+                                          <p class="m-0 small text-muted">A clear, step-by-step structural chronology of
+                                             standard enhancements across the timeline.</p>
+                                       </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2024/08/epicCAFails.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Epic
+                                                CA
+                                                Fails Review</a></h4>
+                                          <p class="m-0 small text-muted">Documented root-cause reviews of high-profile
+                                             Certificate Authority operational trust failures.</p>
+                                       </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2015/09/cipher-suites.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Cipher
+                                                Suite
+                                                Evaluation</a></h4>
+                                          <p class="m-0 small text-muted">Operational classification matrices for
+                                             prioritizing
+                                             cipher definitions and weeding out weak crypto.</p>
+                                       </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2015/09/tls-session-resumption.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i>
+                                                Session
+                                                Resumption Infrastructure</a></h4>
+                                          <p class="m-0 small text-muted">Technical deep-dive explaining abbreviated
+                                             handshakes, state tokens, and secure cache handling.</p>
+                                       </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2015/09/flaw-in-serverkeyexchange-messages-of.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i>
+                                                ServerKeyExchange Message Flaws</a></h4>
+                                          <p class="m-0 small text-muted">An analytical breakdown of the cryptographic
+                                             validation vulnerabilities inside early TLS versions.</p>
+                                       </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2015/09/freak-factoring-attack-on-rsa-export.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> FREAK
+                                                Vulnerability Vector</a></h4>
+                                          <p class="m-0 small text-muted">Dissecting the factoring mechanics that
+                                             weaponized
+                                             legacy export-grade RSA keys against production systems.</p>
+                                       </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2015/09/server-name-indication-sni.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> SNI
+                                                Extension Roadmap</a></h4>
+                                          <p class="m-0 small text-muted">Explaining the protocol layer additions that
+                                             unlocked multi-tenant secure virtual hosting over shared server IPs.</p>
+                                       </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                       <div class="speakerCard p-3">
+                                          <h4 class="speaker-h4 m-0"><a
+                                                href="https://blog.gauravkansal.in/2015/09/ca-certificate-chain-and-traceroute-of.html"
+                                                target="_blank" rel="noopener noreferrer"><i
+                                                   class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Chain
+                                                Verification &amp; Network Paths</a></h4>
+                                          <p class="m-0 small text-muted">How systems map an untrusted site credential
+                                             back up
+                                             through intermediaries to a hardware security module root.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -500,311 +872,20 @@
 
                            </div>
                         </div>
+
+                        <div class="white-space-50"></div>
+
+                        <div class="row">
+                           <div class="col-12 text-center">
+                              <a href="index.html#portfolio" class="btn btn-primary btn-sm"><i
+                                    class="fa-solid fa-arrow-left me-2"></i> Return to Portfolio</a>
+                           </div>
+                        </div>
+
                      </div>
-
-                     <div class="white-space-40"></div>
-
-
-                     <div class="row">
-                        <div class="col-xs-12 col-sm-12">
-                           <div class="block-title">
-                              <h3>Ecosystem <span>Coverage</span></h3>
-                           </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">01 — Foundation</h4>
-                              <p class="fw-semibold mb-1">Protocol History & Timeline</p>
-                              <p class="m-0 small text-muted">
-                                 From SSL 2.0 (1995) to TLS 1.3 (2018) — what changed, what broke, and why each version replaced the last.
-                              </p>
-                           </div>
-                        </div>
-   
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">02 — Mechanics</h4>
-                              <p class="fw-semibold mb-1">The TLS Handshake</p>
-                              <p class="m-0 small text-muted">
-                                 How a client and server negotiate a secure session — full and abbreviated handshakes, session resumption, and session tickets.
-                              </p>
-                           </div>
-                        </div>
-   
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">03 — Cryptography</h4>
-                              <p class="fw-semibold mb-1">Cipher Suites</p>
-                              <p class="m-0 small text-muted">
-                                 How to read a cipher suite name, which ones to use, which to avoid, and why export-grade crypto was a disaster waiting to happen.
-                              </p>
-                           </div>
-                        </div>
-   
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">04 — Trust</h4>
-                              <p class="fw-semibold mb-1">PKI & Certificate Chains</p>
-                              <p class="m-0 small text-muted">
-                                 Root CAs, intermediate CAs, the chain of trust, certificate validation, and what happens when any link in that chain is compromised.
-                              </p>
-                           </div>
-                        </div>
-   
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">05 — Failures</h4>
-                              <p class="fw-semibold mb-1">Epic CA Fails</p>
-                              <p class="m-0 small text-muted">
-                                 A documented history of high-profile Certificate Authority failures and mis-issuances — DigiNotar, Comodo, WoSign, and others.
-                              </p>
-                           </div>
-                        </div>
-   
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">06 — Attacks</h4>
-                              <p class="fw-semibold mb-1">Known Vulnerabilities</p>
-                              <p class="m-0 small text-muted">
-                                 FREAK, POODLE, BEAST, Heartbleed — what each attack exploited and what it forced the industry to fix. Not just names, but mechanisms.
-                              </p>
-                           </div>
-                        </div>
-   
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">07 — Extensions</h4>
-                              <p class="fw-semibold mb-1">SNI, ALPN & OCSP</p>
-                              <p class="m-0 small text-muted">
-                                 The TLS extensions that made modern HTTPS possible — Server Name Indication, application protocol negotiation, and online certificate status.
-                              </p>
-                           </div>
-                        </div>
-   
-                        <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
-                           <div class="speakerCard p-3 h-100">
-                              <h4 class="speaker-h4 mb-3">08 — Deployment</h4>
-                              <p class="fw-semibold mb-1">Configuration & Best Practices</p>
-                              <p class="m-0 small text-muted">
-                                 What to actually configure — cipher suite selection, certificate management, HSTS, certificate transparency, and staying current.
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="white-space-30"></div>
-
-                     <div class="row ">
-                        <div class="col-12 col-md-6 pe-md-4">
-                           <div class="block-title">
-                              <h3>Protocol <span>Timeline</span></h3>
-                           </div>
-                           <div class="timeline timeline-second-style clearfix">
-                              <div class="timeline-item clearfix">
-                                 <div class="left-part">
-                                    <h5 class="item-period text-danger">1995</h5>
-                                 </div>
-                                 <div class="divider"></div>
-                                 <div class="right-part">
-                                    <h4 class="item-title">SSL 2.0 <span class="badge bg-danger ms-2">Deprecated</span>
-                                    </h4>
-                                    <p class="text-muted">Netscape's first published version. Serious design flaws
-                                       discovered almost immediately. Never safe to use.</p>
-                                 </div>
-                              </div>
-
-                              <div class="timeline-item clearfix">
-                                 <div class="left-part">
-                                    <h5 class="item-period text-danger">1996</h5>
-                                 </div>
-                                 <div class="divider"></div>
-                                 <div class="right-part">
-                                    <h4 class="item-title">SSL 3.0 <span class="badge bg-danger ms-2">Deprecated</span>
-                                    </h4>
-                                    <p class="text-muted">A significant redesign — but still ultimately broken. POODLE
-                                       (2014) finally killed it for good.</p>
-                                 </div>
-                              </div>
-
-                              <div class="timeline-item clearfix">
-                                 <div class="left-part">
-                                    <h5 class="item-period text-warning">1999</h5>
-                                 </div>
-                                 <div class="divider"></div>
-                                 <div class="right-part">
-                                    <h4 class="item-title">TLS 1.0 <span
-                                          class="badge bg-warning text-dark ms-2">Deprecated</span></h4>
-                                    <p class="text-muted">SSL 3.0 renamed and handed to the IETF. BEAST and POODLE made
-                                       it untenable. Formally deprecated by RFC 8996 in 2021.</p>
-                                 </div>
-                              </div>
-
-                              <div class="timeline-item clearfix">
-                                 <div class="left-part">
-                                    <h5 class="item-period text-warning">2006</h5>
-                                 </div>
-                                 <div class="divider"></div>
-                                 <div class="right-part">
-                                    <h4 class="item-title">TLS 1.1 <span
-                                          class="badge bg-warning text-dark ms-2">Deprecated</span></h4>
-                                    <p class="text-muted">Added protection against CBC padding attacks but fell short in
-                                       other areas. Deprecated RFC 8996 alongside TLS 1.0.</p>
-                                 </div>
-                              </div>
-
-                              <div class="timeline-item clearfix">
-                                 <div class="left-part">
-                                    <h5 class="item-period text-primary">2008</h5>
-                                 </div>
-                                 <div class="divider"></div>
-                                 <div class="right-part">
-                                    <h4 class="item-title">TLS 1.2 <span class="badge bg-primary ms-2">Legacy
-                                          Active</span></h4>
-                                    <p class="text-muted">Widely deployed architecture layer. Supports authenticated
-                                       encryption parameters (AEAD) and SHA-256 data streams.</p>
-                                 </div>
-                              </div>
-                              <div class="timeline-item clearfix">
-                                 <div class="left-part">
-                                    <h5 class="item-period text-success">2018</h5>
-                                 </div>
-                                 <div class="divider"></div>
-                                 <div class="right-part">
-                                    <h4 class="item-title">TLS 1.3 <span class="badge bg-success ms-2">Current
-                                          Standard</span></h4>
-                                    <p class="text-muted">Optimized transaction framework. Features lower round-trip
-                                       latency handshakes and mandatory forward secrecy constraints.</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-
-                   
-                        <div class="col-12 col-md-6 ps-md-4">
-
-                           <div class="h-100 border-start border-1" style="border-color: #ededed !important; opacity: 0.85;">
-                           
-                           <div class="row g-3 ms-2">
-                             
-                           
-                              <div class="block-title">
-                                 <h3>Deep-Dive <span>Resources</span></h3>
-                              </div>
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2024/08/tlsTimeLine.html" target="_blank"
-                                          rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> TLS Timeline
-                                          Analysis</a></h4>
-                                    <p class="m-0 small text-muted">A clear, step-by-step structural chronology of
-                                       standard enhancements across the timeline.</p>
-                                 </div>
-                              </div>
-
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2024/08/epicCAFails.html" target="_blank"
-                                          rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Epic CA
-                                          Fails Review</a></h4>
-                                    <p class="m-0 small text-muted">Documented root-cause reviews of high-profile
-                                       Certificate Authority operational trust failures.</p>
-                                 </div>
-                              </div>
-
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2015/09/cipher-suites.html" target="_blank"
-                                          rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Cipher Suite
-                                          Evaluation</a></h4>
-                                    <p class="m-0 small text-muted">Operational classification matrices for prioritizing
-                                       cipher definitions and weeding out weak crypto.</p>
-                                 </div>
-                              </div>
-
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2015/09/tls-session-resumption.html"
-                                          target="_blank" rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Session
-                                          Resumption Infrastructure</a></h4>
-                                    <p class="m-0 small text-muted">Technical deep-dive explaining abbreviated
-                                       handshakes, state tokens, and secure cache handling.</p>
-                                 </div>
-                              </div>
-
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2015/09/flaw-in-serverkeyexchange-messages-of.html"
-                                          target="_blank" rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i>
-                                          ServerKeyExchange Message Flaws</a></h4>
-                                    <p class="m-0 small text-muted">An analytical breakdown of the cryptographic
-                                       validation vulnerabilities inside early TLS versions.</p>
-                                 </div>
-                              </div>
-
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2015/09/freak-factoring-attack-on-rsa-export.html"
-                                          target="_blank" rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> FREAK
-                                          Vulnerability Vector</a></h4>
-                                    <p class="m-0 small text-muted">Dissecting the factoring mechanics that weaponized
-                                       legacy export-grade RSA keys against production systems.</p>
-                                 </div>
-                              </div>
-
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2015/09/server-name-indication-sni.html"
-                                          target="_blank" rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> SNI
-                                          Extension Roadmap</a></h4>
-                                    <p class="m-0 small text-muted">Explaining the protocol layer additions that
-                                       unlocked multi-tenant secure virtual hosting over shared server IPs.</p>
-                                 </div>
-                              </div>
-
-                              <div class="col-12">
-                                 <div class="speakerCard p-3">
-                                    <h4 class="speaker-h4 m-0"><a
-                                          href="https://blog.gauravkansal.in/2015/09/ca-certificate-chain-and-traceroute-of.html"
-                                          target="_blank" rel="noopener noreferrer"><i
-                                             class="fa-solid fa-arrow-up-right-from-square me-2 small"></i> Chain
-                                          Verification &amp; Network Paths</a></h4>
-                                    <p class="m-0 small text-muted">How systems map an untrusted site credential back up
-                                       through intermediaries to a hardware security module root.</p>
-                                 </div>
-                              </div>
-                           </div>
-                           </div>
-
-                        </div>
-                     </div>
-
-                     <div class="white-space-50"></div>
-
-                     <div class="row">
-                        <div class="col-12 text-center">
-                           <a href="index.html#portfolio" class="btn btn-primary btn-sm"><i
-                                 class="fa-solid fa-arrow-left me-2"></i> Return to Portfolio</a>
-                        </div>
-                     </div>
-
                   </div>
-               </div>
+               </section>
             </div>
-
          </div>
       </div>
 
@@ -836,7 +917,7 @@
             })
          }, 100);
 
-      
+
          $(document).ready(function () {
             $('#sidebarToggle').click(function () {
                $('#contentarea').toggleClass('open');

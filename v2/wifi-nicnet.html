@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="author" content="Gaurav Kansal">
+  <meta name="description"
+    content="Design, deployment and operation of enterprise Wi-Fi across NICNET government sites. Led by Gaurav Kansal, CWNA/CWSP/CWDP/CWISA certified, Joint Director (IT) at NIC.">
+  <meta name="keywords" content="Wi-Fi, NICNET, WLC, 802.1X, CWNA, CWSP, enterprise wireless, NIC, Gaurav Kansal">
+
+  <meta property="og:title" content="Wi-Fi Across NICNET — Enterprise WLAN Architecture | Gaurav Kansal" />
+  <meta property="og:description"
+    content="End-to-end enterprise wireless services across Government of India sites on NICNET — tracking RF planning, 802.1X authentication, and operational playbooks." />
+  <meta property="og:image" content="img/portfolio/wi-fi.png" />
+  <meta property="og:url" content="https://www.gauravkansal.in/v2/wifi-nicnet.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Gaurav Kansal">
+  <meta property="og:locale" content="en_IN">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@kansal15">
+  <meta name="twitter:creator" content="@kansal15">
+  <meta name="twitter:title" content="Wi-Fi Across NICNET — Enterprise WLAN Architecture">
+  <meta name="twitter:description"
+    content="End-to-end enterprise wireless services across Government of India sites on NICNET by Gaurav Kansal.">
+  <meta name="twitter:image" content="img/portfolio/wi-fi.png">
+
+  <link rel="canonical" href="https://www.gauravkansal.in/v2/wifi-nicnet.html">
+
+  <title>Wi-Fi Across NICNET — Portfolio | Gaurav Kansal</title>
+
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/reset.css" type="text/css" />
+
+  <link rel="stylesheet" href="plugins/bootstrap-5.3.7/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animations.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css" type="text/css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+  <style>
+    .page-title.heading {
+      padding-right: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .page-title:after {
+      content: none;
+      ;
+    }
+
+    .page-title.heading h2 {
+      display: inline-block;
+      position: relative;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      margin-bottom: 0;
+    }
+
+    .page-title.heading h2:after {
+      position: absolute;
+      opacity: 0.45;
+      top: 10px;
+      right: 0;
+      content: '';
+      height: 30px;
+      width: 50px;
+      background-image: -webkit-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
+      background-image: -moz-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
+      background-image: -ms-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
+      -webkit-background-size: 6px 6px;
+      -moz-background-size: 6px 6px;
+      background-size: 6px 6px;
+      z-index: 0;
+    }
+
+    #contentarea {
+      max-width: calc(100% - 30px);
+      transition: max-width 0.3s ease;
+      z-index: 9;
+    }
+
+    #contentarea.open {
+      max-width: calc(100% - 240px);
+    }
+
+    .header-photo {
+      width: 150px;
+    }
+
+    .social-links,
+    .header .copyrights {
+      width: 240px;
+
+    }
+
+
+    /* --- Interactive Collapse Trigger Button --- */
+    #sidebarToggle {
+      position: absolute;
+      top: 30px;
+      border: 1px solid #ededed;
+      background-color: #fff;
+      z-index: 100;
+      padding: 8px 10px;
+      border-radius: 20px;
+      left: -15px;
+    }
+
+    #sidebarToggle:hover {
+      background-color: #0293b8;
+      color: #ffffff;
+    }
+
+    #sidebarToggle i {
+      transition: transform 0.3s ease;
+      z-index: 9;
+      color: #000;
+    }
+    #sidebarToggle:hover i{
+      color: #ffffff;
+    }
+
+    /* Rotated state */
+    #sidebarToggle i.rotated {
+      transform: rotate(180deg);
+    }
+
+
+
+
+    .scale-band-ribbon {
+      background-color: #04b4e0;
+      border-radius: 15px;
+      padding: 35px;
+      color: #fff;
+      box-shadow: 0px 10px 20px -8px rgba(4, 180, 224, .3);
+    }
+
+    .scale-band-ribbon h4 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .scale-band-ribbon p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14.5px;
+      line-height: 1.75;
+    }
+
+    /* --- Certifications Custom Styling Pill Hooks --- */
+    .cert-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cert-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #ededed;
+      border-radius: 8px;
+      padding: 12px 16px;
+      background: #f9f9f9;
+      text-decoration: none;
+      width: 100%;
+      box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .cert-pill:hover {
+      box-shadow: 0 6px 12px rgba(4, 180, 224, 0.12);
+      transform: translateY(-2px);
+      border-color: #04b4e0;
+    }
+
+    .cert-pill i {
+      font-size: 22px;
+      color: #04b4e0;
+    }
+
+    .cert-pill .cp-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #222;
+      display: block;
+    }
+
+    .cert-pill .cp-sub {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* --- Blog References Matrix --- */
+    .blog-refs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .blog-refs li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      background: #f9f9f9;
+      border-left: 3px solid #04b4e0;
+      border-radius: 0 8px 8px 0;
+      border-top: 1px solid #ededed;
+      border-right: 1px solid #ededed;
+      border-bottom: 1px solid #ededed;
+      transition: background .2s, transform 0.2s;
+    }
+
+    .blog-refs li:hover {
+      background: #f2f9fc;
+      transform: translateX(4px);
+    }
+
+    .blog-refs li i {
+      font-size: 18px;
+      color: #04b4e0;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .blog-refs li a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #222;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .blog-refs li a:hover {
+      color: #04b4e0;
+    }
+
+    .blog-refs li span {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* --- Case Study Callout Box --- */
+    .case-callout {
+      border: 1px solid #ededed;
+      border-left: 4px solid #04b4e0;
+      border-radius: 0 12px 12px 0;
+      padding: 22px 24px;
+      background: rgba(4, 180, 224, 0.02);
+      box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.05);
+    }
+
+    .case-callout h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .case-callout p {
+      font-size: 13.5px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    .case-callout a {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0099cc;
+    }
+
+    .case-callout a:hover {
+      color: #04b4e0;
+    }
+
+    /* --- Custom Capabilities Area Grid Cards --- */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .cap-card {
+      border: 1px solid #ededed;
+      border-radius: 12px;
+      padding: 20px;
+      background: #f9f9f9;
+      box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, .03);
+      transition: transform 0.2s, box-shadow 0.2s;
+      height: 100%;
+    }
+
+    .cap-card:hover {
+      box-shadow: 0 6px 15px rgba(4, 180, 224, 0.08);
+      transform: translateY(-3px);
+      border-color: #04b4e0;
+    }
+
+    .cap-card i {
+      font-size: 26px;
+      color: #04b4e0;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .cap-card h5 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .cap-card p {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+      text-align: justify;
+    }
+
+
+
+    /* --- Project Metadata List Item Labels --- */
+    .info-list .title {
+      width: 90px;
+      flex-shrink: 0;
+    }
+
+    /* --- Project Metadata Description Values --- */
+    .project-meta-value {
+      color: #333333;
+      font-weight: 500;
+    }
+
+
+    /* --- Operational Badge Component (Replaces Bootstrap Overrides) --- */
+    .badge.badge-operational {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background-color: #28a745 !important;
+      color: #ffffff;
+    }
+
+    /* --- Bottom Descriptive Teaser Text Block --- */
+    .project-description-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #666666;
+      text-align: justify;
+      border-top: 1px solid #ededed !important;
+    }
+
+    @media only screen and (max-width: 1199px) {
+      .header {
+        max-width: 260px;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      #sidebarToggle {
+        display: none !important;
+      }
+
+      #contentarea {
+        max-width: calc(100% - 0px);
+      }
+      #contentarea.open {
+          max-width: calc(100% - 0px);
+      }
+      .page-content {
+            max-width: 100%;
+         }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
+
+  <div class="page">
+    <div class="page-content">
+
+      <header id="site_header" class="header mobile-menu-hide">
+        <div class="switchHindi">
+          <p><a href="https://xn--p2br8c.xn--i1b1b6exa.xn--h2brj9c/" target="_blank">Switch to हिंदी</a></p>
+        </div>
+        <div class="header-content">
+          <div class="header-photo">
+            <img src="img/profile.jpeg" alt="Gaurav Kansal" />
+          </div>
+          <div class="header-titles">
+            <div class="d-flex justify-content-center">
+              <img src="img/gk-logo-white.png" alt="" role="presentation" class="logo-img" />
+            </div>
+            <h4>Senior IT Leader</h4>
+          </div>
+        </div>
+
+        <ul class="main-menu">
+          <li>
+            <a href="index.html#home">
+              <span class="menu-icon lnr lnr-home"></span>
+              <span class="link-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#about-me">
+              <span class="menu-icon lnr lnr-user"></span>
+              <span class="link-text">About Me</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#resume">
+              <span class="menu-icon lnr lnr-graduation-hat"></span>
+              <span class="link-text">Resume</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="index.html#portfolio">
+              <span class="menu-icon lnr lnr-briefcase"></span>
+              <span class="link-text">Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#blog">
+              <span class="menu-icon lnr lnr-book"></span>
+              <span class="link-text">Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#speaking">
+              <span class="menu-icon lnr lnr-mic"></span>
+              <span class="link-text">Speaking</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact">
+              <span class="menu-icon lnr lnr-envelope"></span>
+              <span class="link-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="social-links">
+          <ul>
+            <li>
+              <a href="mailto:gkansal.me@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank"
+                aria-label="Gaurav Kansal on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/kansal15" target="_blank" aria-label="Gaurav Kansal on Twitter / X"><i
+                  class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/kansal15" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyrights">© 2019-2026 All rights reserved.</div>
+      </header>
+
+      <div class="mobile-section">
+        <div class="mobile-view">
+          <div style="padding: 6px 0 0 10px;">
+            <img src="img/gk-logo-white.png" alt="" role="presentation" class="logo-img" />
+          </div>
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-area" id="contentarea">
+        <div class="animated-sections">
+          <button id="sidebarToggle" class="btn d-lg-flex align-items-center justify-content-center"
+            aria-label="Toggle Navigation Sidebar">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <section data-id="home" class="animated-section start-page">
+
+            <div class="page-title heading mb-3">
+              <h2>Wi-Fi Across <span>NICNET</span></h2>
+
+            </div>
+
+            <div class="section-content">
+
+              <div class="row">
+                <div class="col-12 col-lg-7 pb-4 pb-lg-0">
+                  <div class="block-title">
+                    <h3>Design, Deploy & <span>Operate</span></h3>
+                  </div>
+                  <p style="text-align: justify;">
+                    Rolling out wireless in a government setting is not the same as deploying it in a corporate office.
+                    The buildings are older, the user population is enormous and varied, the security requirements go
+                    well
+                    beyond what most enterprise policies cover, and the expectation is that it just works — for
+                    ministers,
+                    for clerks, for visiting delegates, and for the devices they bring through the door.
+                  </p>
+                  <p style="text-align: justify;">
+                    I've been responsible for end-to-end wireless services across NICNET for over a decade — which means
+                    I've seen what breaks, when it breaks, and why. The architecture we settled on is centralised
+                    controller-based, which makes large-scale management possible. Authentication runs on 802.1X with a
+                    RADIUS backend. For IoT and legacy devices that can't do 802.1X, we use Identity PSK (iPSK) — each
+                    device gets its own unique key without the management overhead of full 802.1X. Rogue AP containment
+                    runs continuously because in a shared government building, unauthorised APs get plugged in — and
+                    detecting them quickly matters.
+                  </p>
+                  <p>I documented the methodology we developed in the <strong>TUNE INTO WLC</strong> handbook (ISBN
+                    978-93-5419-656-0, Copyright L-97828/2020) so that teams across NIC could build on it rather than
+                    rediscovering the same lessons at every new site.</p>
+
+                </div>
+
+                <div class="col-12 col-lg-5">
+
+                  <div class="block-title">
+                    <h3>Project <span>Information</span></h3>
+                  </div>
+
+                  <div class="speakerCard p-4 shadow-sm">
+                    <div class="info-list">
+                      <ul class="p-0 m-0">
+
+                        <li class="d-flex align-items-baseline mb-2">
+                          <span class="title project-meta-label">Category:</span>
+                          <span class="project-meta-value">Enterprise Wi-Fi / WLAN</span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-2">
+                          <span class="title project-meta-label">Network:</span>
+                          <span class="project-meta-value">NICNET</span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-2">
+                          <span class="title project-meta-label">Org:</span>
+                          <span class="project-meta-value">National Informatics Centre</span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-2">
+                          <span class="title project-meta-label">Auth:</span>
+                          <span class="project-meta-value">802.1X / RADIUS + iPSK</span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-2">
+                          <span class="title project-meta-label">Standards:</span>
+                          <span class="project-meta-value">802.11 a/b/g/n/ac/ax</span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-2">
+                          <span class="title project-meta-label">Handbook:</span>
+                          <span class="project-meta-value">
+                            TUNE INTO WLC<br>
+                            <small class="project-meta-subtext">ISBN 978-93-5419-656-0</small>
+                          </span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-0">
+                          <span class="title project-meta-label">Status:</span>
+                          <span class="badge badge-operational">
+                            Operational
+                          </span>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                    <p class="m-0 mt-3 pt-3 project-description-text">
+                      End-to-end wireless services across Government of India sites on NICNET — RF planning, centralized
+                      WLC architecture, 802.1X security, rogue AP containment, and the operational model that keeps it
+                      all
+                      running.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="white-space-40"></div>
+
+              <div class="row">
+
+                <div class="col-xs-12">
+                  <div class="scale-band-ribbon p-4 shadow-sm">
+
+                    <h4> Scale &amp; Reach </h4>
+
+                    <p class="m-0 text-justify">
+                      The deployment spans government offices, ministries, and NIC facilities across multiple states and
+                      union territories — ranging from small district-level offices to large multi-building campuses
+                      with
+                      hundreds of simultaneous users. The same architecture and operational playbook is designed to
+                      scale
+                      from a single building to a pan-India footprint without a redesign.
+                    </p>
+
+                    <ul class="knowledges mt-3">
+                      <li>Pan-India coverage</li>
+                      <li>Multi-site, multi-state</li>
+                      <li>Single building to large campus</li>
+                      <li>High-density user environments</li>
+                      <li>Centralised management</li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="white-space-40"></div>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                  <div class="block-title">
+                    <h3>Architectural <span>Overview</span></h3>
+                  </div>
+                  <p style="text-align: justify;">
+                    Authentication runs on 802.1X with a RADIUS backend. For IoT and legacy devices that can't do
+                    802.1X,
+                    we use Identity PSK (iPSK) — each device gets its own unique key without the management overhead of
+                    full 802.1X. Rogue AP containment runs continuously because in a shared government building,
+                    unauthorised APs get plugged in — and detecting them quickly matters.
+                  </p>
+                  <p style="text-align: justify;">
+                    I documented the methodology we developed in the <strong>TUNE INTO WLC</strong> handbook (ISBN
+                    978-93-5419-656-0, Copyright L-97828/2020) so that teams across NIC could build on it rather than
+                    rediscovering the same lessons at every new site.
+                  </p>
+                </div>
+
+
+              </div>
+
+              <div class="white-space-40"></div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="block-title">
+                    <h3>What the architecture <span>handles</span></h3>
+                  </div>
+                  <p class="text-muted mt-2 mb-4" style="font-size:14px; margin-top: -10px;">
+                    Capabilities and design considerations built into the deployment — independent of any single site's
+                    size.
+                  </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-server"></i>
+                    <h5>Centralised Control</h5>
+                    <p>A controller-based architecture gives a single point of configuration, monitoring, and policy
+                      enforcement across every site — regardless of how many access points are connected.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-unlock-keyhole"></i>
+                    <h5>802.1X / RADIUS Authentication</h5>
+                    <p>Staff devices authenticate via 802.1X against a RADIUS backend — no shared passphrases, no static
+                      credentials to leak or rotate manually.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-fingerprint"></i>
+                    <h5>Identity PSK (iPSK)</h5>
+                    <p>IoT and legacy devices that can't do 802.1X get their own unique pre-shared key per device —
+                      segmentation without the 802.1X overhead.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                    <h5>Rogue AP Containment</h5>
+                    <p>Continuous detection and containment of unauthorised access points — essential in buildings
+                      shared
+                      across multiple departments.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-bezier-curve"></i>
+                    <h5>RF Planning &amp; Channel Design</h5>
+                    <p>Predictive modelling and physical site surveys drive AP placement, channel assignment, and power
+                      levels — tuned for India's regulatory spectrum constraints.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-person-walking-arrow-right"></i>
+                    <h5>Seamless Roaming</h5>
+                    <p>Users move between APs and buildings without re-authenticating — validated through dedicated
+                      roaming tests during deployment.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h5>Segmented SSIDs &amp; VLANs</h5>
+                    <p>Staff, guest, and IoT traffic are kept on separate logical networks by design — minimising blast
+                      radius if any one segment is compromised.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-network-chart"></i>
+                    <h5>IPv6-Ready</h5>
+                    <p>The wireless architecture is built to carry IPv6 alongside IPv4, in line with the broader IPv6
+                      rollout across NICNET.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="cap-card">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h5>Proactive Monitoring</h5>
+                    <p>Ongoing health monitoring, firmware lifecycle management, and capacity planning — so growth in
+                      user
+                      numbers doesn't surprise the network.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="white-space-40"></div>
+
+              <div class="row">
+
+
+                <div class="col-12 col-lg-6 pb-4 pb-lg-0">
+
+                  <!-- Block Title matching your signature template format -->
+                  <div class="block-title">
+                    <h3>How a deployment <span>happens</span></h3>
+                  </div>
+
+                  <p class="text-muted mb-4" style="font-size:14px; margin-top: -10px;">
+                    Five phases, every time — no exceptions.
+                  </p>
+
+                  <!-- Timeline layout node track utilizing your native main.css configurations -->
+                  <div class="timeline timeline-second-style clearfix">
+
+                    <!-- Phase 01: Survey -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period" style="color: #04b4e0; font-weight: 600;">01 Survey</h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Site survey &amp; RF planning</h4>
+                        <p class="text-muted">
+                          Predictive modelling first, then a physical walkthrough. We map coverage, identify
+                          interference
+                          sources, and decide AP placement before a single cable is pulled.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Phase 02: Design -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period" style="color: #04b4e0; font-weight: 600;">02 Design</h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Architecture &amp; security design</h4>
+                        <p class="text-muted">
+                          SSID structure, VLAN mapping, roaming domains, QoS policy, and authentication method — all
+                          decided before installation begins. Changes after the fact are expensive.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Phase 03: Deploy -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period" style="color: #04b4e0; font-weight: 600;">03 Deploy</h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Installation &amp; configuration</h4>
+                        <p class="text-muted">
+                          AP mounting, cabling, WLC onboarding, RADIUS integration, and initial channel / power
+                          calibration. We follow the design — any deviations get documented.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Phase 04: Test -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period" style="color: #04b4e0; font-weight: 600;">04 Test</h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Validation &amp; acceptance</h4>
+                        <p class="text-muted">
+                          Coverage walkthrough, roaming tests, 802.1X authentication tests, rogue AP containment test,
+                          and
+                          load simulation before handover.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Phase 05: Operate -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period text-success" style="font-weight: 600;">05 Operate</h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title text-success">Ongoing operations</h4>
+                        <p class="text-muted">
+                          Proactive monitoring, firmware management, capacity planning as user counts grow, rogue
+                          detection, and periodic re-surveys when the physical environment changes.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+                <div class="col-12 col-lg-6">
+
+                  <div class="block-title">
+                    <h3>Certifications <span>behind the work</span></h3>
+                  </div>
+
+                  <p class="project-meta-subtext mb-3" style="margin-top: -10px;">
+                    Four CWNP certifications — earned because the knowledge mattered, not just for the badge.
+                  </p>
+
+                  <div class="cert-row mb-4">
+
+                    <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fa-solid fa-certificate"></i>
+                      <div>
+                        <span class="cp-name">CWNA</span>
+                        <span class="cp-sub">Certified Wireless Network Administrator</span>
+                      </div>
+                    </a>
+
+                    <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fa-solid fa-shield-halved"></i>
+                      <div>
+                        <span class="cp-name">CWSP</span>
+                        <span class="cp-sub">Certified Wireless Security Professional</span>
+                      </div>
+                    </a>
+
+                    <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fa-solid fa-sliders"></i>
+                      <div>
+                        <span class="cp-name">CWDP</span>
+                        <span class="cp-sub">Certified Wireless Design Professional</span>
+                      </div>
+                    </a>
+
+                    <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fa-solid fa-network-wired"></i>
+                      <div>
+                        <span class="cp-name">CWISA</span>
+                        <span class="cp-sub">Certified Wireless IoT Solutions Administrator</span>
+                      </div>
+                    </a>
+
+                  </div>
+
+                  <div class="case-callout shadow-sm">
+                    <h5>A public example of this thinking</h5>
+                    <p
+                      style="text-align: justify; font-size: 13px; line-height: 1.6; color: #666; margin-bottom: 12px;">
+                      While NICNET deployment details aren't public, the same design principles — RF planning, channel
+                      reuse, density management, and authentication trade-offs — apply to any high-traffic public venue.
+                      I
+                      wrote up a teardown of one such environment based purely on publicly observable network behaviour.
+                    </p>
+                    <a href="https://blog.gauravkansal.in/2016/10/analysis-of-igi-airport-wi-fi-setup.html"
+                      target="_blank" rel="noopener noreferrer" class="fw-bold text-decoration-underline"
+                      style="font-size: 13px;">
+                      Read: Analysis of IGI Airport T3 Wi-Fi Setup &rarr;
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="white-space-40"></div>
+
+              <div class="row mt-5">
+                <div class="col-12">
+
+                  <div class="block-title">
+                    <h3>Related Technical <span>Research Logs</span></h3>
+                  </div>
+                  <p class="text-muted mt-2 mb-4" style="font-size:14px; margin-top: -10px;">
+                    Posts that grew directly out of this work.
+                  </p>
+
+                  <!-- Balanced 2-Column Split Framework -->
+                  <div class="row">
+
+                    <!-- Left Column (col-md-6) -->
+                    <div class="col-12 col-md-6">
+                      <ul class="blog-refs">
+
+                        <!-- Log 01: IGI Airport Setup -->
+                        <li>
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <div>
+                            <a href="https://blog.gauravkansal.in/2016/10/analysis-of-igi-airport-wi-fi-setup.html"
+                              target="_blank" rel="noopener noreferrer">Analysis of IGI Airport T3 Wi-Fi Setup</a>[cite:
+                            5]
+                            <span>Real-world teardown of enterprise Wi-Fi in a high-density venue — Oct 2016[cite:
+                              5]</span>
+                          </div>
+                        </li>
+
+                        <!-- Log 02: Identity PSK -->
+                        <li>
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <div>
+                            <a href="https://blog.gauravkansal.in/2021/07/identity-psk-ipsk.html" target="_blank"
+                              rel="noopener noreferrer">Identity PSK (iPSK)</a>[cite: 5]
+                            <span>Per-device PSK without the overhead of full 802.1X — Jul 2021[cite: 5]</span>
+                          </div>
+                        </li>
+
+                        <!-- Log 03: Channel Availability -->
+                        <li>
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <div>
+                            <a href="https://blog.gauravkansal.in/2021/12/availability-and-info-of-wlan-channels.html"
+                              target="_blank" rel="noopener noreferrer">WLAN Channel Availability in India</a>[cite: 5]
+                            <span>Which 5 GHz channels are usable in India and why — Dec 2021[cite: 5]</span>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                    <!-- Right Column (col-md-6) -->
+                    <div class="col-12 col-md-6">
+                      <ul class="blog-refs">
+
+                        <!-- Log 04: MIMO Primitives -->
+                        <li>
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <div>
+                            <a href="https://blog.gauravkansal.in/2020/09/multiple-input-multiple-output-mimo.html"
+                              target="_blank" rel="noopener noreferrer">MIMO — Multiple Input Multiple Output</a>[cite:
+                            5]
+                            <span>How spatial multiplexing changed Wi-Fi throughput — Sep 2020[cite: 5]</span>
+                          </div>
+                        </li>
+
+                        <!-- Log 05: Wireless Terms Glossary -->
+                        <li>
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <div>
+                            <a href="https://blog.gauravkansal.in/2020/08/common-terms-used-in-wireless.html"
+                              target="_blank" rel="noopener noreferrer">Common Terms Used in Wireless</a>[cite: 5]
+                            <span>The glossary that comes up constantly in enterprise wireless — Aug 2020[cite:
+                              5]</span>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </div> <!-- /row -->
+                </div>
+              </div>
+              <div class="white-space-40"></div>
+
+              <div class="row">
+                <div class="col-12 text-center">
+                  <a href="index.html#portfolio" class="btn btn-primary"><i class="fa-solid fa-arrow-left me-2"></i>
+                    Return to Portfolio</a>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/animating.js"></script>
+  <script src="plugins/bootstrap-5.3.7/js/bootstrap.min.js"></script>
+  <script src="plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <script src="js/jquery.shuffle.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="plugins/owlcarousel/js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#sidebarToggle').click(function () {
+        $('#contentarea').toggleClass('open');
+        $('#sidebarToggle i').toggleClass('rotated');
+      });
+    });
+  </script>
+</body>
+
+</html>

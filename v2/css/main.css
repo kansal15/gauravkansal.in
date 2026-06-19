@@ -290,7 +290,7 @@ input[type="submit"]:focus {
     display: inline-block;
     float: left;
     width: 100%;
-    max-width: 300px;
+    max-width: 270px;
     height: 100%;
     max-height: 80vh;
     min-height: inherit;
@@ -367,6 +367,8 @@ input[type="submit"]:focus {
     opacity: 1;
   }
 
+ 
+
   /* --- End Navigation --- */
 }
 
@@ -408,7 +410,7 @@ input[type="submit"]:focus {
 
 .header-photo {
   position: relative;
-  width: 180px;
+  width: 150px;
   margin: 0 auto 30px;
   z-index: 1;
 }
@@ -459,7 +461,7 @@ input[type="submit"]:focus {
 /* --- Social Links --- */
 .social-links {
   margin: 10px 0;
-  width: 300px;
+  width: 270px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -513,7 +515,7 @@ input[type="submit"]:focus {
 
 .header .copyrights {
   color: #fff;
-  width: 300px;
+  width: 270px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -532,7 +534,7 @@ input[type="submit"]:focus {
   background-color: transparent;
   height: 100%;
   width: 100%;
-  max-width: calc(100% - 300px);
+  max-width: calc(100% - 270px);
 }
 
 .animated-sections {
@@ -620,7 +622,7 @@ input[type="submit"]:focus {
   position: relative;
   padding-right: 25px;
   padding-bottom: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .page-title h2 {
@@ -2473,11 +2475,11 @@ blockquote {
   }
 
   .header {
-    max-width: 330px;
+    max-width: 260px;
   }
 
   .content-area {
-    max-width: calc(100% - 330px);
+    max-width: calc(100% - 260px);
   }
   .portfolio-details{
     min-height: 260px;
@@ -2505,7 +2507,7 @@ blockquote {
   .header {
     position: absolute;
     width: 100%;
-    max-width: 330px;
+    max-width: 280px;
     top: 0;
     right: 0;
     bottom: 0;
@@ -2522,12 +2524,19 @@ blockquote {
     -ms-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
   }
+  .header .social-links{
+    position: relative;
+    bottom: auto;
+    left: 0;
+    padding: 0;
+    width: 100%;
+  }
 
   .header .copyrights {
     right: 0;
     width: 100%;
     position: relative;
-    margin-top: 30px;
+    margin-top: 0px;
   }
 
   .page {
@@ -2579,12 +2588,13 @@ blockquote {
 
   ul.main-menu {
     margin: 30px 0;
+    padding: 0;
   }
 
   ul.main-menu a {
     display: block;
     color: #fff;
-    padding: 12px 0;
+    padding: 10px 0;
     line-height: 21px;
     opacity: .7;
   }
