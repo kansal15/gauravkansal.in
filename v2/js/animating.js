@@ -148,7 +148,7 @@ var PageTransitions = (function ($, options) {
         });
 
         $(document)
-            .on("click",".main-menu, #ajax-page-close-button", function (e) { // Hide Ajax Loaded Page on Navigation cleck and Close button
+            .on("click",".main-menu a[href^='#'], #ajax-page-close-button", function (e) { // Hide Ajax Loaded Page on Navigation cleck and Close button
                 e.preventDefault();
                 hideContent();
                 location.hash = location.hash.split('/')[0];
