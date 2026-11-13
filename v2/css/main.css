@@ -1473,6 +1473,34 @@ input[type="text"],
   color: #00718d;
 }
 
+/* Skill tags that open a page: dark blue with a small arrow */
+.knowledges li.skill-link {
+  padding: 0;
+  background: #00a3c8;
+  transition: background 0.2s;
+}
+.knowledges li.skill-link:hover {
+  background: #00718d;
+}
+.knowledges li.skill-link a,
+.knowledges li.skill-link a:hover,
+.knowledges li.skill-link a:focus {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  color: #fff;
+  text-decoration: none;
+}
+.knowledges li.skill-link a::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M4 2h6v6M10 2 3 9' stroke='black' stroke-width='1.6' fill='none'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M4 2h6v6M10 2 3 9' stroke='black' stroke-width='1.6' fill='none'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 /* --- End of Knowledges --- */
 
 /* --- Certificates --- */
