@@ -3400,3 +3400,89 @@ blockquote {
     text-align: left !important;
   }
 }
+
+/* --- Portfolio cards: picture on top, equal heights --- */
+section[data-id="portfolio"] .portfolio-filters,
+section[data-id="portfolio"] .portfolio-details .category {
+  display: none !important;
+}
+section[data-id="portfolio"] .portfolio-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  height: auto !important;
+}
+section[data-id="portfolio"] .portfolio-grid figure.item {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e6eef2;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+  transition: box-shadow .2s, translate .2s;
+}
+section[data-id="portfolio"] .portfolio-grid figure.item:hover {
+  translate: 0 -4px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, .10);
+}
+section[data-id="portfolio"] .portfolio-grid figure .pf-img {
+  position: relative !important;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  z-index: 1;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #eef6f9;
+}
+section[data-id="portfolio"] .portfolio-grid figure .pf-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+}
+section[data-id="portfolio"] .portfolio-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0 !important;
+  padding: 20px 22px 22px !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+section[data-id="portfolio"] .portfolio-details h4.name {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+section[data-id="portfolio"] .portfolio-details .portfolio-subtext {
+  margin: 0 0 12px;
+}
+section[data-id="portfolio"] .portfolio-details p {
+  text-align: left !important;
+  margin-bottom: 16px;
+}
+section[data-id="portfolio"] .portfolio-link {
+  margin-top: auto;
+}
+section[data-id="portfolio"] .portfolio-link .btn {
+  border-radius: 30px;
+  padding: 6px 18px;
+}
+@media only screen and (max-width: 768px) {
+  section[data-id="portfolio"] .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
