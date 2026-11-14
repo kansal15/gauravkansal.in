@@ -3368,3 +3368,35 @@ blockquote {
     padding: 20px 30px 5px 30px;
   }
 }
+
+/* --- Phone and tablet fixes --- */
+@media only screen and (max-width: 1024px) {
+  /* Arrows: small solid pill, side by side */
+  .lmpixels-arrows-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    padding: 2px 4px;
+    right: 12px;
+    bottom: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
+  }
+  .lmpixels-arrows-nav div {
+    font-size: 20px;
+    padding: 6px 12px;
+    margin: 0;
+  }
+  /* Extra space at the end of each section, so the arrows never cover text */
+  .animated-section::after {
+    content: "";
+    display: block;
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* Left-align text on narrow screens to avoid big gaps between words */
+  .page-content p[style*="justify"] {
+    text-align: left !important;
+  }
+}
