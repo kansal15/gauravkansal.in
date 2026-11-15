@@ -3568,3 +3568,8 @@ section[data-id="portfolio"] .portfolio-grid figure .portfolio-details a.pf-awar
 }
 section[data-id="portfolio"] .portfolio-details .pf-award svg { color: #d99a00; flex: none; }
 section[data-id="portfolio"] .portfolio-details .pf-award:hover { background: #ffe9a8; color: #5c4100; }
+
+/* --- Speaking cards: room for the location icons --- */
+section[data-id="speaking"] .speakingPage .block-title { margin-bottom: 6px; }
+section[data-id="speaking"] .speakerCard .card-body { padding: 8px 12px !important; }
+section[data-id="speaking"] .speakerCard p.text-muted { font-size: 12.5px !important; }
