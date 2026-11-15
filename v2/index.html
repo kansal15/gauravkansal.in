@@ -698,6 +698,20 @@
    <script src="js/paginathing.min.js"></script>
    <script src="js/imagesloaded.pkgd.min.js"></script>
    <script src="js/main.js"></script>
+   <script>
+      // Photo pop-up for links with class "lightbox".
+      // (main.js sets this up inside $(document).on("ready"), which does not run with jQuery 3.)
+      $(function () {
+         $("body").magnificPopup({
+            delegate: "a.lightbox",
+            type: "image",
+            removalDelay: 300,
+            mainClass: "mfp-fade",
+            image: { titleSrc: "title" },
+            gallery: { enabled: true }
+         });
+      });
+   </script>
 
    <script>
       $('#blogPage').load('include/blogPage.html');
