@@ -81,7 +81,7 @@ $(window).resize(customScroll);
     // Contact form validator
     $(function () {
 
-        $('#contact_form').validator();
+        if ($.fn.validator) { $('#contact_form').validator(); }
 
         $('#contact_form').on('submit', function (e) {
             if (!e.isDefaultPrevented()) {
