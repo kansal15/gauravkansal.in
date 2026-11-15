@@ -3573,3 +3573,26 @@ section[data-id="portfolio"] .portfolio-details .pf-award:hover { background: #f
 section[data-id="speaking"] .speakingPage .block-title { margin-bottom: 6px; }
 section[data-id="speaking"] .speakerCard .card-body { padding: 8px 12px !important; }
 section[data-id="speaking"] .speakerCard p.text-muted { font-size: 12.5px !important; }
+
+/* --- Resume award with a small photo --- */
+section[data-id="resume"] .award-item {
+  position: relative;
+  padding-left: 116px;
+  min-height: 60px;
+}
+section[data-id="resume"] .award-item .award-photo {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 104px;
+  height: 52px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+section[data-id="resume"] .award-item .award-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s;
+}
+section[data-id="resume"] .award-item .award-photo:hover img { transform: scale(1.08); }
