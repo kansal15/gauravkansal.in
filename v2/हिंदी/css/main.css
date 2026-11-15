@@ -3546,3 +3546,25 @@ section[data-id="speaking"] .speakerCard .col-md-10:has(.talk-photo) .talk-photo
   float: none;
   margin: 2px 0 0;
 }
+
+/* --- Award tag on a portfolio card --- */
+section[data-id="portfolio"] .portfolio-grid figure .portfolio-details a.pf-award {
+  position: relative !important;
+  top: auto; left: auto; right: auto; bottom: auto;
+  width: auto; height: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin: 0 0 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #fff4d6;
+  color: #7a5600;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+section[data-id="portfolio"] .portfolio-details .pf-award svg { color: #d99a00; flex: none; }
+section[data-id="portfolio"] .portfolio-details .pf-award:hover { background: #ffe9a8; color: #5c4100; }
