@@ -138,7 +138,7 @@ $(window).resize(customScroll);
 
 
     // On Document Load
-    $(document).on('ready', function() {
+    $(function() {
         var movementStrength = 23;
         var height = movementStrength / $(document).height();
         var width = movementStrength / $(document).width();
@@ -270,10 +270,10 @@ $(window).resize(customScroll);
             mainClass: 'mfp-fade',
             image: {
                 // options for image content type
-                titleSrc: 'title',
-                gallery: {
-                    enabled: true
-                },
+                titleSrc: 'title'
+            },
+            gallery: {
+                enabled: true
             },
 
             iframe: {
