@@ -1,0 +1,30 @@
+# Starts the Hindi site sync as soon as something is pushed to master.
+# The Hindi repo (web-kansal-bharat/web-kansal-bharat) has its own
+# "Sync from main site" workflow; this just presses its "Run workflow" button.
+#
+# Needs the secret HINDI_SYNC_TOKEN: a fine-grained token with access to
+# web-kansal-bharat/web-kansal-bharat only, permission "Actions: Read and write".
+
+name: Trigger Hindi site sync
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the sync in the Hindi repo
+        env:
+          GH_TOKEN: ${{ secrets.HINDI_SYNC_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::HINDI_SYNC_TOKEN is not set. The Hindi site will sync on its own schedule."
+            exit 0
+          fi
+          gh workflow run sync-from-main.yml -R web-kansal-bharat/web-kansal-bharat --ref master
+          echo "Hindi sync started."
