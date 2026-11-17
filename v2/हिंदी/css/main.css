@@ -3138,6 +3138,8 @@ blockquote {
   text-align: center;
 }
 
+.title-block h1,
+
 .title-block h2 {
   font-size: 60px;
   line-height: 74px;
@@ -3272,6 +3274,8 @@ blockquote {
   .lm-animated-bg {
     display: none;
   }
+
+  .title-block h1,
 
   .title-block h2 {
     font-size: 48px;
@@ -3602,6 +3606,7 @@ section[data-id="resume"] .award-item .award-photo:hover img { transform: scale(
   .start-page .section-content.vcentered {
     align-items: flex-start;
   }
+  .title-block h1,
   .title-block h2 {
     font-size: 30px;
     line-height: 40px;
@@ -3620,4 +3625,9 @@ section[data-id="resume"] .award-item .award-photo:hover img { transform: scale(
     width: 96px;
     margin-bottom: 10px;
   }
+}
+
+/* --- Home: buttons --- */
+.home-buttons {
+  gap: 12px;
 }
