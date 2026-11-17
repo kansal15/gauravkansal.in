@@ -41,7 +41,7 @@
                style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                font-src 'self' https://fonts.gstatic.com;
                img-src 'self' data: https:;
-               connect-src 'self' https://www.google-analytics.com;
+               connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
                frame-src https://www.googletagmanager.com;">
 
    <!-- Canonical — tells Google which URL is the authoritative version -->
@@ -163,7 +163,7 @@
                <li>
                   <a href="#speaking" class="nav-anim">
                      <span class="menu-icon lnr lnr-users"></span>
-                     <span class="link-text">community</span>
+                     <span class="link-text">Community</span>
                   </a>
                </li>
                <li>
@@ -176,21 +176,22 @@
             <div class="social-links">
                <ul>
                   <li>
-                     <a href="mailto:gkansal.me@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                     <a href="mailto:gkansal.me@gmail.com" target="_blank" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
                   </li>
                   <li>
-                     <a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank"><i
+                     <a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i
                            class="fab fa-linkedin-in"></i></a>
                   </li>
                   <li>
-                     <a href="https://twitter.com/kansal15" target="_blank"><i class="fab fa-twitter"></i></a>
+                     <a href="https://twitter.com/kansal15" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                   </li>
                   <li>
-                     <a href="https://github.com/kansal15" target="_blank"><i class="fab fa-github"></i></a>
+                     <a href="https://github.com/kansal15" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
                   </li>
                </ul>
             </div>
-            <div class="copyrights">© 2019-2026 All rights reserved.</div>
+            <div class="copyrights">© 2019–<span id="year">2026</span> Gaurav Kansal</div>
+            <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
          </header>
          <div class="mobile-section">
             <div class="mobile-view">
