@@ -3634,3 +3634,13 @@ section[data-id="resume"] .award-item .award-photo:hover img { transform: scale(
 .home-buttons {
   gap: 12px;
 }
+
+/* Mobile menu toggle is a real <button>: remove default button styles */
+button.menu-toggle {
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}

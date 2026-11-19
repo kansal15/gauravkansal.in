@@ -30,6 +30,7 @@ $('.menu-toggle').on("click", function () {
     $('#site_header').addClass('animate');
     $('#site_header').toggleClass('mobile-menu-hide');
     $('.menu-toggle').toggleClass('open');
+    $('.menu-toggle').attr('aria-expanded', $('.menu-toggle').hasClass('open'));
 });
 
 // Mobile menu hide on main menu item click
@@ -44,7 +45,7 @@ $('.main-menu').on("click", "a", function (e) {
 
         if (windowWidth < 1025) {
             siteHeader.addClass('mobile-menu-hide');
-            $('.menu-toggle').removeClass('open');
+            $('.menu-toggle').removeClass('open').attr('aria-expanded', 'false');
             setTimeout(function(){
                 siteHeader.addClass('animate');
             }, 500);
