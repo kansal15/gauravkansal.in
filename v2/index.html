@@ -32,8 +32,8 @@
 
    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
                script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-               font-src 'self' https://fonts.gstatic.com;
+               style-src 'self' 'unsafe-inline';
+               font-src 'self';
                img-src 'self' data: https:;
                connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
                frame-src https://www.googletagmanager.com;">
@@ -68,6 +68,8 @@
       }
    </script>
    <link rel="shortcut icon" href="img/favicon.png" />
+   <link rel="preload" href="css/fonts/poppins/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="css/fonts/poppins/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
    <link rel="stylesheet" href="css/reset.css" type="text/css" />
    <link rel="stylesheet" href="plugins/bootstrap-5.3.7/css/bootstrap.purged.min.css" type="text/css" />
    <link rel="stylesheet" href="css/animations.css" type="text/css" />
@@ -529,7 +531,7 @@
                               <!-- Portfolio Grid -->
                               <div class="portfolio-grid two-columns">
                                  <figure class="item lbaudio" data-groups='["category_all", "category_dns"]'>
-                                    <a class="pf-img" href="https://blog.gauravkansal.in/2025/06/one-ten-ten-ten-dnsIndia.html" target="_blank" rel="noopener"><img src="img/portfolio/DNS.png" alt="Sarvagya - Bharat Public DNS" loading="lazy"></a>
+                                    <a class="pf-img" href="https://blog.gauravkansal.in/2025/06/one-ten-ten-ten-dnsIndia.html" target="_blank" rel="noopener"><img src="img/portfolio/DNS.webp" alt="Sarvagya - Bharat Public DNS" loading="lazy"></a>
                                     <div class="portfolio-details">
                                        <h4 class="name">Sarvagya - Bharat Public DNS (1.10.10.10 & 2409::1)</h4>
                                        <h6 class="portfolio-subtext">DNS · National Infrastructure</h6>
@@ -549,7 +551,7 @@
                                  </figure>
 
                                  <figure class="item lbvideo" data-groups='["category_all", "category_wifi"]'>
-                                    <a class="pf-img" href="wifi-nicnet.html" target="_blank" rel="noopener"><img src="img/portfolio/wi-fi.png" alt="Wi-Fi across NICNET" loading="lazy"></a>
+                                    <a class="pf-img" href="wifi-nicnet.html" target="_blank" rel="noopener"><img src="img/portfolio/wi-fi.webp" alt="Wi-Fi across NICNET" loading="lazy"></a>
                                     <div class="portfolio-details">
                                        <h4 class="name">Wi-Fi Across NICNET</h4>
                                        <h6 class="portfolio-subtext">Wi-Fi · Enterprise Wireless · NICNET</h6>
@@ -568,7 +570,7 @@
                                  </figure>
 
                                  <figure class="item lbaudio" data-groups='["category_all", "category_rpki"]'>
-                                    <a class="pf-img" href="https://blog.gauravkansal.in/2026/06/nic-wins-two-awards-at-nixi-23rd-foundation-day.html" target="_blank" rel="noopener"><img src="img/portfolio/rpki.png" alt="RPKI across NICNET and NKN" loading="lazy"></a>
+                                    <a class="pf-img" href="https://blog.gauravkansal.in/2026/06/nic-wins-two-awards-at-nixi-23rd-foundation-day.html" target="_blank" rel="noopener"><img src="img/portfolio/rpki.webp" alt="RPKI across NICNET and NKN" loading="lazy"></a>
                                     <div class="portfolio-details">
                                        <h4 class="name">RPKI Across NICNET &amp; NKN: Securing BGP Routing</h4>
                                        <h6 class="portfolio-subtext">RPKI · BGP · Routing Security</h6>
@@ -589,7 +591,7 @@
                                  </figure>
 
                                  <figure class="item lbaudio" data-groups='["category_all", "category_tls"]'>
-                                    <a class="pf-img" href="tlslabs_portfolio.html" target="_blank" rel="noopener"><img src="img/portfolio/TlsLab.png" alt="TLS Labs" loading="lazy"></a>
+                                    <a class="pf-img" href="tlslabs_portfolio.html" target="_blank" rel="noopener"><img src="img/portfolio/TlsLab.webp" alt="TLS Labs" loading="lazy"></a>
                                     <div class="portfolio-details">
                                        <h4 class="name">TLS Labs: Learn TLS, Certificates and Cryptography</h4>
                                        <h6 class="portfolio-subtext">TLS · SSL · PKI</h6>
@@ -606,7 +608,7 @@
                                  </figure>
 
                                  <figure class="item standard" data-groups='["category_all", "category_aaa"]'>
-                                    <div class="pf-img"><img src="img/portfolio/trijya.png" alt="Trijya AAA" loading="lazy"></div>
+                                    <div class="pf-img"><img src="img/portfolio/trijya.webp" alt="Trijya AAA" loading="lazy"></div>
                                     <div class="portfolio-details">
                                        <h4 class="name">Trijya: Open Source AAA for Government Networks</h4>
                                        <h6 class="portfolio-subtext">Open Source · Authentication · Network Security

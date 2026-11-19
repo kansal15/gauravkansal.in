@@ -36,8 +36,8 @@
    -->
    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
                script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-               font-src 'self' https://fonts.gstatic.com;
+               style-src 'self' 'unsafe-inline';
+               font-src 'self';
                img-src 'self' data: https:;
                connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
                frame-src https://www.googletagmanager.com;">
@@ -47,6 +47,8 @@
 
    <title>TLS Labs — Portfolio | Gaurav Kansal</title>
    <link rel="shortcut icon" href="img/favicon.png" />
+   <link rel="preload" href="css/fonts/poppins/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="css/fonts/poppins/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
    <link rel="stylesheet" href="css/reset.css" type="text/css" />
    <link rel="stylesheet" href="plugins/bootstrap-5.3.7/css/bootstrap.purged.min.css" type="text/css" />
    <link rel="stylesheet" href="css/animations.css" type="text/css" />
@@ -411,7 +413,7 @@
                         </div>
                         <!--
                      <div class="col-md-5 text-center mt-4 mt-md-0">
-                        <img src="img/portfolio/TlsLab.png" alt="TLS Labs Platform Preview"
+                        <img src="img/portfolio/TlsLab.webp" alt="TLS Labs Platform Preview"
                            class="img-fluid rounded border shadow-sm"
                            style="max-height: 240px; width: 100%; object-fit: cover;">
                      </div>
