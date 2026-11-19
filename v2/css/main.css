@@ -3398,10 +3398,13 @@ blockquote {
     height: 70px;
   }
 }
-@media only screen and (max-width: 768px) {
-  /* Left-align text on narrow screens to avoid big gaps between words */
-  .page-content p[style*="justify"] {
-    text-align: left !important;
+/* Body text: left-aligned on phones and tablets, justified on desktop */
+.text-body {
+  text-align: left;
+}
+@media only screen and (min-width: 992px) {
+  .text-body {
+    text-align: justify;
   }
 }
 

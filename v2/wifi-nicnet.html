@@ -271,7 +271,6 @@
       color: #555;
       line-height: 1.7;
       margin-bottom: 12px;
-      text-align: justify;
     }
 
     .case-callout a {
@@ -326,7 +325,6 @@
       color: #666;
       line-height: 1.6;
       margin: 0;
-      text-align: justify;
     }
 
 
@@ -359,7 +357,6 @@
       font-size: 13px;
       line-height: 1.6;
       color: #666666;
-      text-align: justify;
       border-top: 1px solid #ededed !important;
     }
 
@@ -383,6 +380,12 @@
       .page-content {
             max-width: 100%;
          }
+    }
+    /* Same as the site rule: justified on desktop only */
+    @media only screen and (min-width: 992px) {
+      .case-callout p, .cap-card p, .project-description-text {
+        text-align: justify;
+      }
     }
   </style>
 </head>
@@ -509,7 +512,7 @@
                   <div class="block-title">
                     <h3>Design, Deploy & <span>Operate</span></h3>
                   </div>
-                  <p style="text-align: justify;">
+                  <p class="text-body">
                     Rolling out wireless in a government setting is not the same as deploying it in a corporate office.
                     The buildings are older, the user population is enormous and varied, the security requirements go
                     well
@@ -517,7 +520,7 @@
                     ministers,
                     for clerks, for visiting delegates, and for the devices they bring through the door.
                   </p>
-                  <p style="text-align: justify;">
+                  <p class="text-body">
                     I've been responsible for end-to-end wireless services across NICNET for over a decade — which means
                     I've seen what breaks, when it breaks, and why. The architecture we settled on is centralised
                     controller-based, which makes large-scale management possible. Authentication runs on 802.1X with a
@@ -606,7 +609,7 @@
 
                     <h4> Scale &amp; Reach </h4>
 
-                    <p class="m-0 text-justify">
+                    <p class="m-0 text-body">
                       The deployment spans government offices, ministries, and NIC facilities across multiple states and
                       union territories — ranging from small district-level offices to large multi-building campuses
                       with
@@ -635,14 +638,14 @@
                   <div class="block-title">
                     <h3>Architectural <span>Overview</span></h3>
                   </div>
-                  <p style="text-align: justify;">
+                  <p class="text-body">
                     Authentication runs on 802.1X with a RADIUS backend. For IoT and legacy devices that can't do
                     802.1X,
                     we use Identity PSK (iPSK) — each device gets its own unique key without the management overhead of
                     full 802.1X. Rogue AP containment runs continuously because in a shared government building,
                     unauthorised APs get plugged in — and detecting them quickly matters.
                   </p>
-                  <p style="text-align: justify;">
+                  <p class="text-body">
                     I documented the methodology we developed in the <strong>TUNE INTO WLC</strong> handbook (ISBN
                     978-93-5419-656-0, Copyright L-97828/2020) so that teams across NIC could build on it rather than
                     rediscovering the same lessons at every new site.
@@ -903,8 +906,8 @@
 
                   <div class="case-callout shadow-sm">
                     <h5>A public example of this thinking</h5>
-                    <p
-                      style="text-align: justify; font-size: 13px; line-height: 1.6; color: #666; margin-bottom: 12px;">
+                    <p class="text-body"
+                      style="font-size: 13px; line-height: 1.6; color: #666; margin-bottom: 12px;">
                       While NICNET deployment details aren't public, the same design principles — RF planning, channel
                       reuse, density management, and authentication trade-offs — apply to any high-traffic public venue.
                       I
