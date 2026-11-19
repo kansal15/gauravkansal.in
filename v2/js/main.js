@@ -175,12 +175,16 @@ $(window).resize(customScroll);
 
         // Blog grid init
         var $container = $(".blog-masonry");
-        $container.imagesLoaded(function(){
-            $container.masonry();
-        });
+        if ($container.length && $.fn.masonry) {
+            $container.imagesLoaded(function(){
+                $container.masonry();
+            });
+        }
 
         customScroll();
 
+        // Owl Carousel is no longer loaded; keep this only for pages that add it back
+        if ($.fn.owlCarousel) {
         // Text rotation
         $('.text-rotation').owlCarousel({
             loop: true,
@@ -246,6 +250,7 @@ $(window).resize(customScroll);
                 }
             }
         });
+        }
 
 
         //Form Controls

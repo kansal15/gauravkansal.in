@@ -18,10 +18,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
 
 /* Linear Icons Font */
-@import url('fonts/linearicons/style.css');
 
 /* FontAwesome Free Icons Font */
-@import url('fonts/fontawesome-6.2.0/css/all.min.css');
 
 
 /* ------------------------------------------------------------
@@ -3643,4 +3641,17 @@ button.menu-toggle {
   color: inherit;
   -webkit-appearance: none;
   appearance: none;
+}
+
+/* Inline SVG icons (replace the icon fonts) */
+.ico {
+  display: inline-block;
+  line-height: 1;
+}
+.ico > svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+  overflow: visible;
 }

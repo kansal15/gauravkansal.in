@@ -34,11 +34,10 @@
   <link rel="shortcut icon" href="img/favicon.png" />
   <link rel="stylesheet" href="css/reset.css" type="text/css" />
 
-  <link rel="stylesheet" href="plugins/bootstrap-5.3.7/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="plugins/bootstrap-5.3.7/css/bootstrap.purged.min.css" type="text/css" />
   <link rel="stylesheet" href="css/animations.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css" type="text/css" />
-  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" />
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 
@@ -391,6 +390,36 @@
 </head>
 
 <body>
+<!-- Icons (Bootstrap Icons, MIT licence) used on this page -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/></symbol>
+<symbol id="i-bezier2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h1A1.5 1.5 0 0 1 5 2.5h4.134a1 1 0 1 1 0 1h-2.01q.269.27.484.605C8.246 5.097 8.5 6.459 8.5 8c0 1.993.257 3.092.713 3.7.356.476.895.721 1.787.784A1.5 1.5 0 0 1 12.5 11h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5H6.866a1 1 0 1 1 0-1h1.711a3 3 0 0 1-.165-.2C7.743 11.407 7.5 10.007 7.5 8c0-1.46-.246-2.597-.733-3.355-.39-.605-.952-1-1.767-1.112A1.5 1.5 0 0 1 3.5 5h-1A1.5 1.5 0 0 1 1 3.5zM2.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10 10a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></symbol>
+<symbol id="i-book" viewBox="0 0 16 16"><path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/></symbol>
+<symbol id="i-box-arrow-up-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/> <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/></symbol>
+<symbol id="i-broadcast-pin" viewBox="0 0 16 16"><path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8"/></symbol>
+<symbol id="i-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></symbol>
+<symbol id="i-diagram-3-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5z"/></symbol>
+<symbol id="i-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></symbol>
+<symbol id="i-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></symbol>
+<symbol id="i-ethernet" viewBox="0 0 16 16"><path d="M14 13.5v-7a.5.5 0 0 0-.5-.5H12V4.5a.5.5 0 0 0-.5-.5h-1v-.5A.5.5 0 0 0 10 3H6a.5.5 0 0 0-.5.5V4h-1a.5.5 0 0 0-.5.5V6H2.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5M3.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m2 0h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zM9.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25z"/> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/></symbol>
+<symbol id="i-fingerprint" viewBox="0 0 16 16"><path d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z"/> <path d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332q0 .613-.066 1.221A.5.5 0 0 1 6 8.447q.06-.555.06-1.115zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8m-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329"/> <path d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334m.3 1.67a.5.5 0 0 1 .449.546 10.7 10.7 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.7 9.7 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z"/> <path d="M3.902 4.222a5 5 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 4 4 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556m6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705M3.68 5.842a.5.5 0 0 1 .422.568q-.044.289-.044.59c0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.5 6.5 0 0 0 3.058 7q0-.375.054-.736a.5.5 0 0 1 .568-.422m8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.5 10.5 0 0 0 .584-2.678.5.5 0 0 1 .54-.456"/> <path d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865m-.89 1.257a.5.5 0 0 1 .04.706A5.48 5.48 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346m12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49"/></symbol>
+<symbol id="i-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></symbol>
+<symbol id="i-heart-pulse-fill" viewBox="0 0 16 16"><path d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9z"/> <path d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z"/></symbol>
+<symbol id="i-house" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/></symbol>
+<symbol id="i-layers-fill" viewBox="0 0 16 16"><path d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882z"/> <path d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0z"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></symbol>
+<symbol id="i-mortarboard" viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/> <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/></symbol>
+<symbol id="i-patch-check-fill" viewBox="0 0 16 16"><path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/></symbol>
+<symbol id="i-people" viewBox="0 0 16 16"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></symbol>
+<symbol id="i-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/></symbol>
+<symbol id="i-person-walking" viewBox="0 0 16 16"><path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6.44 3.752A.75.75 0 0 1 7 3.5h1.445c.742 0 1.32.643 1.243 1.38l-.43 4.083a1.8 1.8 0 0 1-.088.395l-.318.906.213.242a.8.8 0 0 1 .114.175l2 4.25a.75.75 0 1 1-1.357.638l-1.956-4.154-1.68-1.921A.75.75 0 0 1 6 8.96l.138-2.613-.435.489-.464 2.786a.75.75 0 1 1-1.48-.246l.5-3a.75.75 0 0 1 .18-.375l2-2.25Z"/> <path d="M6.25 11.745v-1.418l1.204 1.375.261.524a.8.8 0 0 1-.12.231l-2.5 3.25a.75.75 0 1 1-1.19-.914zm4.22-4.215-.494-.494.205-1.843.006-.067 1.124 1.124h1.44a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.531-.22Z"/></symbol>
+<symbol id="i-server" viewBox="0 0 16 16"><path d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4c0 1.473-2.985 2.667-6.667 2.667S1.333 5.473 1.333 4z"/> <path d="M1.333 6.334v3C1.333 10.805 4.318 12 8 12s6.667-1.194 6.667-2.667V6.334a6.5 6.5 0 0 1-1.458.79C11.81 7.684 9.967 8 8 8s-3.809-.317-5.208-.876a6.5 6.5 0 0 1-1.458-.79z"/> <path d="M14.667 11.668a6.5 6.5 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.5 6.5 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667z"/></symbol>
+<symbol id="i-shield-shaded" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/></symbol>
+<symbol id="i-sliders" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/></symbol>
+<symbol id="i-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></symbol>
+<symbol id="i-unlock-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M12 0a4 4 0 0 1 4 4v2.5h-1V4a3 3 0 1 0-6 0v2h.5A2.5 2.5 0 0 1 12 8.5v5A2.5 2.5 0 0 1 9.5 16h-7A2.5 2.5 0 0 1 0 13.5v-5A2.5 2.5 0 0 1 2.5 6H8V4a4 4 0 0 1 4-4"/></symbol>
+</svg>
   <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
 
   <div class="page">
@@ -415,43 +444,43 @@
         <ul class="main-menu">
           <li>
             <a href="index.html#home">
-              <span class="menu-icon lnr lnr-home"></span>
+              <span class="menu-icon ico"><svg aria-hidden="true" focusable="false"><use href="#i-house"/></svg></span>
               <span class="link-text">Home</span>
             </a>
           </li>
           <li>
             <a href="index.html#about-me">
-              <span class="menu-icon lnr lnr-user"></span>
+              <span class="menu-icon ico"><svg aria-hidden="true" focusable="false"><use href="#i-person"/></svg></span>
               <span class="link-text">About Me</span>
             </a>
           </li>
           <li>
             <a href="index.html#resume">
-              <span class="menu-icon lnr lnr-graduation-hat"></span>
+              <span class="menu-icon ico"><svg aria-hidden="true" focusable="false"><use href="#i-mortarboard"/></svg></span>
               <span class="link-text">Resume</span>
             </a>
           </li>
           <li class="active">
             <a href="index.html#portfolio">
-              <span class="menu-icon lnr lnr-briefcase"></span>
+              <span class="menu-icon ico"><svg aria-hidden="true" focusable="false"><use href="#i-briefcase"/></svg></span>
               <span class="link-text">Portfolio</span>
             </a>
           </li>
           <li>
             <a href="index.html#blog">
-              <span class="menu-icon lnr lnr-book"></span>
+              <span class="menu-icon ico"><svg aria-hidden="true" focusable="false"><use href="#i-book"/></svg></span>
               <span class="link-text">Blog</span>
             </a>
           </li>
           <li>
             <a href="index.html#speaking">
-              <span class="menu-icon lnr lnr-users"></span>
+              <span class="menu-icon ico"><svg aria-hidden="true" focusable="false"><use href="#i-people"/></svg></span>
               <span class="link-text">Community</span>
             </a>
           </li>
           <li>
             <a href="index.html#contact">
-              <span class="menu-icon lnr lnr-envelope"></span>
+              <span class="menu-icon ico"><svg aria-hidden="true" focusable="false"><use href="#i-envelope"/></svg></span>
               <span class="link-text">Contact</span>
             </a>
           </li>
@@ -460,17 +489,16 @@
         <div class="social-links">
                <ul>
                   <li>
-                     <a href="mailto:gkansal.me@gmail.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                     <a href="mailto:gkansal.me@gmail.com" aria-label="Email" title="Email"><i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-envelope-fill"/></svg></i></a>
                   </li>
                   <li>
-                     <a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i
-                           class="fab fa-linkedin-in"></i></a>
+                     <a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"/></svg></i></a>
                   </li>
                   <li>
-                     <a href="https://x.com/kansal15" target="_blank" rel="noopener" aria-label="X" title="X"><i class="bi bi-twitter-x"></i></a>
+                     <a href="https://x.com/kansal15" target="_blank" rel="noopener" aria-label="X" title="X"><i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-twitter-x"/></svg></i></a>
                   </li>
                   <li>
-                     <a href="https://github.com/kansal15" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                     <a href="https://github.com/kansal15" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-github"/></svg></i></a>
                   </li>
                </ul>
             </div>
@@ -495,7 +523,7 @@
         <div class="animated-sections">
           <button id="sidebarToggle" class="btn d-lg-flex align-items-center justify-content-center"
             aria-label="Toggle Navigation Sidebar">
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-chevron-right"/></svg></i>
           </button>
 
           <section data-id="home" class="animated-section start-page">
@@ -670,7 +698,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-server"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-server"/></svg></i>
                     <h5>Centralised Control</h5>
                     <p>A controller-based architecture gives a single point of configuration, monitoring, and policy
                       enforcement across every site — regardless of how many access points are connected.</p>
@@ -679,7 +707,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-unlock-keyhole"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-unlock-fill"/></svg></i>
                     <h5>802.1X / RADIUS Authentication</h5>
                     <p>Staff devices authenticate via 802.1X against a RADIUS backend — no shared passphrases, no static
                       credentials to leak or rotate manually.</p>
@@ -688,7 +716,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-fingerprint"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-fingerprint"/></svg></i>
                     <h5>Identity PSK (iPSK)</h5>
                     <p>IoT and legacy devices that can't do 802.1X get their own unique pre-shared key per device —
                       segmentation without the 802.1X overhead.</p>
@@ -697,7 +725,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-tower-broadcast"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-broadcast-pin"/></svg></i>
                     <h5>Rogue AP Containment</h5>
                     <p>Continuous detection and containment of unauthorised access points — essential in buildings
                       shared
@@ -707,7 +735,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-bezier-curve"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-bezier2"/></svg></i>
                     <h5>RF Planning &amp; Channel Design</h5>
                     <p>Predictive modelling and physical site surveys drive AP placement, channel assignment, and power
                       levels — tuned for India's regulatory spectrum constraints.</p>
@@ -716,7 +744,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-person-walking-arrow-right"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-person-walking"/></svg></i>
                     <h5>Seamless Roaming</h5>
                     <p>Users move between APs and buildings without re-authenticating — validated through dedicated
                       roaming tests during deployment.</p>
@@ -725,7 +753,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-layer-group"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-layers-fill"/></svg></i>
                     <h5>Segmented SSIDs &amp; VLANs</h5>
                     <p>Staff, guest, and IoT traffic are kept on separate logical networks by design — minimising blast
                       radius if any one segment is compromised.</p>
@@ -734,7 +762,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-network-chart"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-diagram-3-fill"/></svg></i>
                     <h5>IPv6-Ready</h5>
                     <p>The wireless architecture is built to carry IPv6 alongside IPv4, in line with the broader IPv6
                       rollout across NICNET.</p>
@@ -743,7 +771,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-lg-4 mb-3">
                   <div class="cap-card">
-                    <i class="fa-solid fa-heart-pulse"></i>
+                    <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-heart-pulse-fill"/></svg></i>
                     <h5>Proactive Monitoring</h5>
                     <p>Ongoing health monitoring, firmware lifecycle management, and capacity planning — so growth in
                       user
@@ -868,7 +896,7 @@
 
                     <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
                       rel="noopener noreferrer">
-                      <i class="fa-solid fa-certificate"></i>
+                      <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-patch-check-fill"/></svg></i>
                       <div>
                         <span class="cp-name">CWNA</span>
                         <span class="cp-sub">Certified Wireless Network Administrator</span>
@@ -877,7 +905,7 @@
 
                     <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
                       rel="noopener noreferrer">
-                      <i class="fa-solid fa-shield-halved"></i>
+                      <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-shield-shaded"/></svg></i>
                       <div>
                         <span class="cp-name">CWSP</span>
                         <span class="cp-sub">Certified Wireless Security Professional</span>
@@ -886,7 +914,7 @@
 
                     <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
                       rel="noopener noreferrer">
-                      <i class="fa-solid fa-sliders"></i>
+                      <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-sliders"/></svg></i>
                       <div>
                         <span class="cp-name">CWDP</span>
                         <span class="cp-sub">Certified Wireless Design Professional</span>
@@ -895,7 +923,7 @@
 
                     <a class="cert-pill" href="https://www.cwnp.com/cwnpVerification.php?cwnp_id=126131" target="_blank"
                       rel="noopener noreferrer">
-                      <i class="fa-solid fa-network-wired"></i>
+                      <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-ethernet"/></svg></i>
                       <div>
                         <span class="cp-name">CWISA</span>
                         <span class="cp-sub">Certified Wireless IoT Solutions Administrator</span>
@@ -945,7 +973,7 @@
 
                         <!-- Log 01: IGI Airport Setup -->
                         <li>
-                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-box-arrow-up-right"/></svg></i>
                           <div>
                             <a href="https://blog.gauravkansal.in/2016/10/analysis-of-igi-airport-wi-fi-setup.html"
                               target="_blank" rel="noopener noreferrer">Analysis of IGI Airport T3 Wi-Fi Setup</a>[cite:
@@ -957,7 +985,7 @@
 
                         <!-- Log 02: Identity PSK -->
                         <li>
-                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-box-arrow-up-right"/></svg></i>
                           <div>
                             <a href="https://blog.gauravkansal.in/2021/07/identity-psk-ipsk.html" target="_blank"
                               rel="noopener noreferrer">Identity PSK (iPSK)</a>[cite: 5]
@@ -967,7 +995,7 @@
 
                         <!-- Log 03: Channel Availability -->
                         <li>
-                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-box-arrow-up-right"/></svg></i>
                           <div>
                             <a href="https://blog.gauravkansal.in/2021/12/availability-and-info-of-wlan-channels.html"
                               target="_blank" rel="noopener noreferrer">WLAN Channel Availability in India</a>[cite: 5]
@@ -984,7 +1012,7 @@
 
                         <!-- Log 04: MIMO Primitives -->
                         <li>
-                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-box-arrow-up-right"/></svg></i>
                           <div>
                             <a href="https://blog.gauravkansal.in/2020/09/multiple-input-multiple-output-mimo.html"
                               target="_blank" rel="noopener noreferrer">MIMO — Multiple Input Multiple Output</a>[cite:
@@ -995,7 +1023,7 @@
 
                         <!-- Log 05: Wireless Terms Glossary -->
                         <li>
-                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          <i class="ico"><svg aria-hidden="true" focusable="false"><use href="#i-box-arrow-up-right"/></svg></i>
                           <div>
                             <a href="https://blog.gauravkansal.in/2020/08/common-terms-used-in-wireless.html"
                               target="_blank" rel="noopener noreferrer">Common Terms Used in Wireless</a>[cite: 5]
@@ -1014,7 +1042,7 @@
 
               <div class="row">
                 <div class="col-12 text-center">
-                  <a href="index.html#portfolio" class="btn btn-primary"><i class="fa-solid fa-arrow-left me-2"></i>
+                  <a href="index.html#portfolio" class="btn btn-primary"><i class="me-2 ico"><svg aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></i>
                     Return to Portfolio</a>
                 </div>
               </div>
@@ -1030,11 +1058,8 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/modernizr.custom.js"></script>
   <script src="js/animating.js"></script>
-  <script src="plugins/bootstrap-5.3.7/js/bootstrap.min.js"></script>
   <script src="plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
   <script src="js/jquery.shuffle.min.js"></script>
-  <script src="js/masonry.pkgd.min.js"></script>
-  <script src="plugins/owlcarousel/js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
   <script src="js/main.js"></script>
