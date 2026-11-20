@@ -4,6 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Content Security Policy. GitHub Pages cannot send HTTP headers, so it is set here.
+        Keep this tag before any stylesheet or script. Same policy on every page. -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+               style-src 'self' 'unsafe-inline';
+               font-src 'self';
+               img-src 'self' data: https:;
+               connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
+               frame-src https://www.googletagmanager.com;
+               object-src 'none';
+               base-uri 'self';
+               form-action 'self';
+               upgrade-insecure-requests">
   <meta http-equiv="Cache-control" content="public">
   <meta name="author" content="Gaurav Kansal">
   <meta name="description"

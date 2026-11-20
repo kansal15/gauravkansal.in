@@ -4,6 +4,19 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Content Security Policy. GitHub Pages cannot send HTTP headers, so it is set here.
+        Keep this tag before any stylesheet or script. Same policy on every page. -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+               style-src 'self' 'unsafe-inline';
+               font-src 'self';
+               img-src 'self' data: https:;
+               connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
+               frame-src https://www.googletagmanager.com;
+               object-src 'none';
+               base-uri 'self';
+               form-action 'self';
+               upgrade-insecure-requests">
    <meta property="og:description"
       content="Gaurav Kansal is a Joint Director (IT) at the National Informatics Centre and Technical Lead of the Sarvagya - Bharat Public DNS (1.10.10.10). Specialising in DNS, IPv6, SSL/TLS, and enterprise wireless networks." />
    <meta name="author" content="Gaurav Kansal">
@@ -30,13 +43,6 @@
       content="Joint Director (IT) at NIC · Technical Lead, Bharat Public DNS (1.10.10.10) · Former NRO NC Member at APNIC (2023–2024) · DNS, IPv6, TLS, Wi-Fi.">
    <meta name="twitter:image" content="https://www.gauravkansal.in/v2/img/meta_image.jpg">
 
-   <meta http-equiv="Content-Security-Policy" content="default-src 'self';
-               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-               style-src 'self' 'unsafe-inline';
-               font-src 'self';
-               img-src 'self' data: https:;
-               connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
-               frame-src https://www.googletagmanager.com;">
 
    <!-- Main address and language versions -->
    <link rel="canonical" href="https://www.gauravkansal.in/v2/index.html">

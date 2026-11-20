@@ -4,6 +4,19 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Content Security Policy. GitHub Pages cannot send HTTP headers, so it is set here.
+        Keep this tag before any stylesheet or script. Same policy on every page. -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+               style-src 'self' 'unsafe-inline';
+               font-src 'self';
+               img-src 'self' data: https:;
+               connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
+               frame-src https://www.googletagmanager.com;
+               object-src 'none';
+               base-uri 'self';
+               form-action 'self';
+               upgrade-insecure-requests">
    <meta http-equiv="Cache-control" content="public">
    <meta name="description" content="TLS Labs, built by Gaurav Kansal at NIC: one place to learn SSL/TLS, certificates and cryptography. Covers TLS 1.0 to 1.3, PKI and X.509, cipher suites and certificate authorities.">
    <meta property="og:description"
@@ -29,18 +42,6 @@
       content="TLS Labs, built by Gaurav Kansal at NIC: one place to learn SSL/TLS, certificates and cryptography. Covers TLS 1.0 to 1.3, PKI and X.509, cipher suites and certificate authorities.">
    <meta name="twitter:image" content="https://www.gauravkansal.in/v2/img/portfolio/TlsLab.png">
 
-   <!--
-     CONTENT SECURITY POLICY (optional but recommended)
-     Add this HTTP response header on your server, OR as a
-     <meta> tag in <head>. Helps prevent XSS attacks.
-   -->
-   <meta http-equiv="Content-Security-Policy" content="default-src 'self';
-               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-               style-src 'self' 'unsafe-inline';
-               font-src 'self';
-               img-src 'self' data: https:;
-               connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;
-               frame-src https://www.googletagmanager.com;">
 
    <!-- Canonical — tells Google which URL is the authoritative version -->
    <link rel="canonical" href="https://www.gauravkansal.in/v2/tlslabs_portfolio.html">
